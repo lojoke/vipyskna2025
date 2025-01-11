@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connecticut - The First 13 American States</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrQdP2v6/UYbVx3AnWDrjH2UY6j6VMnVq3E13ujc0nBt8N3p19KcfmGqOk4GJqI6gZr30HBwSxGjkL7ZsQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles_connecticut.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <h2 class="history-header">
+                <a href="../main.html" class="main-header-link" aria-label="Перейти на головну сторінку">The First 13 American States</a>
+            </h2>
+            <p>Explore the rich history of the original thirteen colonies...</p>
+        </div>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="container">
+            <span class="toggle-button" aria-label="Toggle Navigation Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </span>
+            <ul class="nav-menu">
+                <li><a href="../introduction.html">Introduction</a></li>
+                <li class="dropdown">
+                    <a href="#states" class="dropbtn">States <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="delaware.html">Delaware</a>
+                        <a href="pennsylvania.html">Pennsylvania</a>
+                        <a href="new-jersey.html">New Jersey</a>
+                        <a href="georgia.html">Georgia</a>
+                        <a href="connecticut.html">Connecticut</a>
+                        <a href="massachusetts.html">Massachusetts</a>
+                        <a href="maryland.html">Maryland</a>
+                        <a href="states/south-carolina.html">South Carolina</a>
+                        <a href="states/new-hampshire.html">New Hampshire</a>
+                        <a href="states/virginia.html">Virginia</a>
+                        <a href="states/new-york.html">New York</a>
+                        <a href="states/north-carolina.html">North Carolina</a>
+                        <a href="states/rhode-island.html">Rhode Island</a>
+                    </div>
+                </li>
+                <li><a href="../history.html">History</a></li>
+                <li><a href="../conclusion.html">Conclusion</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Connecticut</h1>
+            <p>The Constitution State and Nutmeg State</p>
+        </div>
+    </section>
+
+    <!-- Main Content Section -->
+    <section class="content">
+        <div class="container">
+            <h2>Discovering Connecticut</h2>
+            <img src="../images/Connecticut.png" alt="Connecticut History" class="state-image">
+            <p>
+                Connecticut is a state in the northeastern United States, bordered by New York, Massachusetts, and Rhode Island. It is known as the “Constitution State” for its role in the creation of the U.S. Constitution and the “Nutmeg State” for its reputation of producing or importing nutmeg. It is also famous for its history, education, and innovation.
+            </p>
+            <ul>
+                <li>It is the fifth state to ratify the U.S. Constitution on January 9, 1788.</li>
+                <li>It is the third smallest state by area and the fourth most densely populated state.</li>
+                <li>It has eight counties and its capital is Hartford. Its largest city is Bridgeport.</li>
+                <li>It has the highest per capita income and the second highest human development index in the nation.</li>
+                <li>It is the first state to have a state constitution, the Fundamental Orders of Connecticut, adopted in 1639.</li>
+                <li>It is the birthplace of many famous people, such as Eli Whitney, Samuel Colt, Noah Webster, Harriet Beecher Stowe, Mark Twain, and George W. Bush.</li>
+                <li>It is home to the first public library, the first hamburger, the first helicopter, and the first nuclear submarine.</li>
+                <li>It is the leading producer of silverware, clocks, helicopters, and submarines in the country.</li>
+                <li>It has more than 250 miles of coastline, including the Long Island Sound and the Connecticut River.</li>
+                <li>It has more than 130 state parks and forests, such as Gillette Castle State Park, Sleeping Giant State Park, and Mashamoquet Brook State Park.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Quiz Section -->
+    <section class="quiz-section">
+        <div class="container">
+            <h3>Exercise 5 (Connecticut): Test Your Knowledge</h3>
+            <form class="quiz-form" id="quizForm">
+                <div class="quiz-question" id="q1">
+                    <h4>1. What nickname is Connecticut known by due to its role in the creation of the U.S. Constitution?</h4>
+                    <ul class="quiz-options">
+                        <li><button type="button" onclick="selectAnswer('q1', 'a')"> The Constitution State</button></li>
+                        <li><button type="button" onclick="selectAnswer('q1', 'b')"> The Nutmeg State</button></li>
+                        <li><button type="button" onclick="selectAnswer('q1', 'c')"> The Liberty State</button></li>
+                    </ul>
+                </div>
+
+                <div class="quiz-question" id="q2">
+                    <h4>2. Connecticut is the ___ state by area.</h4>
+                    <ul class="quiz-options">
+                        <li><button type="button" onclick="selectAnswer('q2', 'a')"> Largest</button></li>
+                        <li><button type="button" onclick="selectAnswer('q2', 'b')"> Third smallest</button></li>
+                        <li><button type="button" onclick="selectAnswer('q2', 'c')"> Sixth largest</button></li>
+                    </ul>
+                </div>
+
+                <div class="quiz-question" id="q3">
+                    <h4>3. Which city is the capital of Connecticut?</h4>
+                    <ul class="quiz-options">
+                        <li><button type="button" onclick="selectAnswer('q3', 'a')"> Hartford</button></li>
+                        <li><button type="button" onclick="selectAnswer('q3', 'b')"> Bridgeport</button></li>
+                        <li><button type="button" onclick="selectAnswer('q3', 'c')"> New Haven</button></li>
+                    </ul>
+                </div>
+
+                <div class="quiz-question" id="q4">
+                    <h4>4. In what year did Connecticut ratify the U.S. Constitution?</h4>
+                    <ul class="quiz-options">
+                        <li><button type="button" onclick="selectAnswer('q4', 'a')"> 1639</button></li>
+                        <li><button type="button" onclick="selectAnswer('q4', 'b')"> 1776</button></li>
+                        <li><button type="button" onclick="selectAnswer('q4', 'c')"> 1788</button></li>
+                    </ul>
+                </div>
+
+                <div class="quiz-question" id="q5">
+                    <h4>5. Connecticut is home to the first public ___.</h4>
+                    <ul class="quiz-options">
+                        <li><button type="button" onclick="selectAnswer('q5', 'a')"> School</button></li>
+                        <li><button type="button" onclick="selectAnswer('q5', 'b')"> Library</button></li>
+                        <li><button type="button" onclick="selectAnswer('q5', 'c')"> Hospital</button></li>
+                    </ul>
+                </div>
+
+                <button type="button" class="button" id="submit-quiz">Submit answers</button>
+            </form>
+            <div id="quiz-feedback" class="feedback"></div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 The First 13 American States. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="quiz.js"></script>
+</body>
+</html>

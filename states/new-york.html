@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New York - The First 13 American States</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrQdP2v6/UYbVx3AnWDrjH2UY6j6VMnVq3E13ujc0nBt8N3p19KcfmGqOk4GJqI6gZr30HBwSxGjkL7ZsQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles_new-york.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <h2 class="history-header">
+                <a href="../main.html" class="main-header-link" aria-label="Перейти на головну сторінку">The First 13 American States</a>
+            </h2>
+            <p>Explore the rich history of the original thirteen colonies...</p>
+        </div>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="container">
+            <span class="toggle-button" aria-label="Toggle Navigation Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </span>
+            <ul class="nav-menu">
+                <li><a href="../introduction.html">Introduction</a></li>
+                <li class="dropdown">
+                    <a href="#states" class="dropbtn">States <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="delaware.html">Delaware</a>
+                        <a href="pennsylvania.html">Pennsylvania</a>
+                        <a href="new-jersey.html">New Jersey</a>
+                        <a href="georgia.html">Georgia</a>
+                        <a href="connecticut.html">Connecticut</a>
+                        <a href="massachusetts.html">Massachusetts</a>
+                        <a href="maryland.html">Maryland</a>
+                        <a href="south-carolina.html">South Carolina</a>
+                        <a href="new-hampshire.html">New Hampshire</a>
+                        <a href="virginia.html">Virginia</a>
+                        <a href="new-york.html">New York</a>
+                        <a href="north-carolina.html">North Carolina</a>
+                        <a href="rhode-island.html">Rhode Island</a>
+                    </div>
+                </li>
+                <li><a href="../history.html">History</a></li>
+                <li><a href="../conclusion.html">Conclusion</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <img src="../images/HistoricNewYorkCityskyline.png" alt="New York Landscape" class="hero-image">
+        <div class="hero-content">
+            <h1>New York</h1>
+            <p>The Empire State: A Beacon of Culture and Innovation</p>
+        </div>
+    </section>
+
+    <!-- Main Content Section -->
+    <section class="content">
+        <div class="container">
+            <h2>Discovering New York</h2>
+            <p>
+                New York is a state in the northeastern United States, with a long and diverse history, from its Native American origins to its role as a global city and a cultural and economic hub. It is the birthplace of many movements, innovations, and icons, as well as the site of many challenges, tragedies, and triumphs. It is also a state with a varied and beautiful landscape, from its mountains and lakes to its rivers and islands.
+            </p>
+            <h3>Facts and Information about New York:</h3>
+            <ul>
+                <li>It is the eleventh state to ratify the U.S. Constitution on July 26, 1788.</li>
+                <li>It is the fourth largest state by area and the third most populous state.</li>
+                <li>It has 62 counties and its capital is Albany. Its largest and most famous city is New York City, which is also the most populous city in the U.S. and one of the most influential cities in the world.</li>
+                <li>It has the third largest economy in the nation and the eighth largest in the world, with major sectors such as finance, media, entertainment, technology, and tourism.</li>
+                <li>It is the home of the New York Stock Exchange, Wall Street, Broadway, Times Square, the Statue of Liberty, the Empire State Building, and many other landmarks and attractions.</li>
+                <li>It is the origin of many cultural and social movements, such as the Harlem Renaissance, the Stonewall riots, the hip hop culture, and the feminist movement.</li>
+                <li>It is the site of many historical events and conflicts, such as the American Revolution, the War of 1812, the Erie Canal, the Civil War Draft Riots, the Great Depression, the World’s Fairs, the 9/11 attacks, and the COVID-19 pandemic.</li>
+                <li>It is the birthplace or residence of many famous people, such as Alexander Hamilton, Theodore Roosevelt, Franklin D. Roosevelt, Eleanor Roosevelt, Martin Luther King Jr., Malcolm X, Walt Whitman, Mark Twain, Edith Wharton, F. Scott Fitzgerald, Andy Warhol, Robert De Niro, Madonna, Jay-Z, and Donald Trump.</li>
+                <li>It is the leading producer of dairy, apples, grapes, and wine in the country.</li>
+            </ul>
+            <figure class="image-with-caption">
+                <img src="../images/Grand-Central-(historical new-york).jpg" alt="New York History" class="state-image">
+                <figcaption class="image-caption">Grand Central Terminal in 1913</figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <!-- Quiz Section -->
+    <section class="quiz-section">
+        <div class="container">
+            <h3>Exercise 11 (New York): Test Your Knowledge</h3>
+            <form class="quiz-form" id="quizForm">
+                <div class="quiz-question" id="q1">
+                    <h4>1. New York ratified the U.S. Constitution as the ___ state.</h4>
+                    <ul class="quiz-options">
+                        <li><button type="button" onclick="selectAnswer('q1', 'a')"> Fourth</button></li>
+                        <li><button type="button" onclick="selectAnswer('q1', 'b')"> Eleventh</button></li>
+                        <li><button type="button" onclick="selectAnswer('q1', 'c')"> Thirteenth</button></li>
+                        <li><button type="button" onclick="selectAnswer('q1', 'd')"> Fifteenth</button></li>
+                    </ul>
+                </div>
+
+                <div class="quiz-question" id="q2">
+                    <h4>2. The capital of New York is:</h4>
+                    <ul class="quiz-options">
+                        <li><button type="button" onclick="selectAnswer('q2', 'a')"> New York City</button></li>
+                        <li><button type="button" onclick="selectAnswer('q2', 'b')"> Buffalo</button></li>
+                        <li><button type="button" onclick="selectAnswer('q2', 'c')"> Albany</button></li>
+                        <li><button type="button" onclick="selectAnswer('q2', 'd')"> Rochester</button></li>
+                    </ul>
+                </div>
+
+                <div class="quiz-question" id="q3">
+                    <h4>3. Which of the following landmarks is NOT in New York?</h4>
+                    <ul class="quiz-options">
+                        <li><button type="button" onclick="selectAnswer('q3', 'a')"> The Statue of Liberty</button></li>
+                        <li><button type="button" onclick="selectAnswer('q3', 'b')"> The Golden Gate Bridge</button></li>
+                        <li><button type="button" onclick="selectAnswer('q3', 'c')"> Times Square</button></li>
+                        <li><button type="button" onclick="selectAnswer('q3', 'd')"> The Empire State Building</button></li>
+                    </ul>
+                </div>
+
+                <div class="quiz-question" id="q4">
+                    <h4>4. New York is the birthplace of which cultural movement?</h4>
+                    <ul class="quiz-options">
+                        <li><button type="button" onclick="selectAnswer('q4', 'a')"> The Renaissance</button></li>
+                        <li><button type="button" onclick="selectAnswer('q4', 'b')"> The Harlem Renaissance</button></li>
+                        <li><button type="button" onclick="selectAnswer('q4', 'c')"> The Industrial Revolution</button></li>
+                        <li><button type="button" onclick="selectAnswer('q4', 'd')"> The Beat Generation</button></li>
+                    </ul>
+                </div>
+
+                <div class="quiz-question" id="q5">
+                    <h4>5. Which sector is NOT a major part of New York's economy?</h4>
+                    <ul class="quiz-options">
+                        <li><button type="button" onclick="selectAnswer('q5', 'a')"> Technology</button></li>
+                        <li><button type="button" onclick="selectAnswer('q5', 'b')"> Agriculture</button></li>
+                        <li><button type="button" onclick="selectAnswer('q5', 'c')"> Oil refining</button></li>
+                        <li><button type="button" onclick="selectAnswer('q5', 'd')"> Finance</button></li>
+                    </ul>
+                </div>
+
+                <div class="quiz-question" id="q6">
+                    <h4>6. The New York Stock Exchange is located in:</h4>
+                    <ul class="quiz-options">
+                        <li><button type="button" onclick="selectAnswer('q6', 'a')"> Central Park</button></li>
+                        <li><button type="button" onclick="selectAnswer('q6', 'b')"> Wall Street</button></li>
+                        <li><button type="button" onclick="selectAnswer('q6', 'c')"> Broadway</button></li>
+                        <li><button type="button" onclick="selectAnswer('q6', 'd')"> Silicon Alley</button></li>
+                    </ul>
+                </div>
+
+                <div class="quiz-question" id="q7">
+                    <h4>7. New York is a leading producer of:</h4>
+                    <ul class="quiz-options">
+                        <li><button type="button" onclick="selectAnswer('q7', 'a')"> Rice</button></li>
+                        <li><button type="button" onclick="selectAnswer('q7', 'b')"> Dairy</button></li>
+                        <li><button type="button" onclick="selectAnswer('q7', 'c')"> Beef</button></li>
+                        <li><button type="button" onclick="selectAnswer('q7', 'd')"> Cotton</button></li>
+                    </ul>
+                </div>
+
+                <div class="quiz-question" id="q8">
+                    <h4>8. The largest city in New York is:</h4>
+                    <ul class="quiz-options">
+                        <li><button type="button" onclick="selectAnswer('q8', 'a')"> Albany</button></li>
+                        <li><button type="button" onclick="selectAnswer('q8', 'b')"> Buffalo</button></li>
+                        <li><button type="button" onclick="selectAnswer('q8', 'c')"> New York City</button></li>
+                        <li><button type="button" onclick="selectAnswer('q8', 'd')"> Syracuse</button></li>
+                    </ul>
+                </div>
+
+                <div class="quiz-question" id="q9">
+                    <h4>9. Which historical event did NOT occur in New York?</h4>
+                    <ul class="quiz-options">
+                        <li><button type="button" onclick="selectAnswer('q9', 'a')"> The American Revolution</button></li>
+                        <li><button type="button" onclick="selectAnswer('q9', 'b')"> The War of 1812</button></li>
+                        <li><button type="button" onclick="selectAnswer('q9', 'c')"> The Civil War Draft Riots</button></li>
+                        <li><button type="button" onclick="selectAnswer('q9', 'd')"> The Boston Tea Party</button></li>
+                    </ul>
+                </div>
+
+                <div class="quiz-question" id="q10">
+                    <h4>10. New York's economy is ranked ___ in the world.</h4>
+                    <ul class="quiz-options">
+                        <li><button type="button" onclick="selectAnswer('q10', 'a')"> First</button></li>
+                        <li><button type="button" onclick="selectAnswer('q10', 'b')"> Third</button></li>
+                        <li><button type="button" onclick="selectAnswer('q10', 'c')"> Eighth</button></li>
+                        <li><button type="button" onclick="selectAnswer('q10', 'd')"> Twelfth</button></li>
+                    </ul>
+                </div>
+
+                <button type="button" class="button" id="submit-quiz">Submit answers</button>
+            </form>
+            <div id="quiz-feedback" class="feedback"></div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 The First 13 American States. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="quiz.js"></script>
+</body>
+</html>

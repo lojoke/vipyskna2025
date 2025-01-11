@@ -1,0 +1,436 @@
+/* styles_maryland.css */
+
+/* Загальні стилі */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333333;
+    line-height: 1.6;
+}
+
+/* Контейнер */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* Шапка */
+header {
+    background-color: #1e3c72; /* Синій відтінок */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header .main-header-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 2em;
+    transition: color 0.3s ease;
+}
+
+header .main-header-link:hover {
+    color: #d1e0e0;
+}
+
+header p {
+    font-size: 1.2em;
+    margin-top: 5px;
+}
+
+/* Навігаційне меню */
+nav {
+    background-color: #333333;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-menu li {
+    position: relative;
+}
+
+.nav-menu li a {
+    display: block;
+    padding: 15px 20px;
+    color: #ffffff;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    background-color: #333333; /* Забезпечує непрозорість */
+}
+
+.nav-menu li a:hover {
+    background-color: #575757;
+    color: #ffffff;
+}
+
+/* Випадаюче меню */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333333;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    top: 50px;
+    left: 0;
+}
+
+.dropdown-content a {
+    color: #ffffff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #575757;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Toggle Button для мобільних пристроїв */
+.toggle-button {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 15px;
+}
+
+.toggle-button .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #ffffff;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.hero-image {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+    opacity: 0.8;
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero p {
+    font-size: 1.5em;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+/* Main Content Section */
+.content {
+    padding: 50px 0;
+    background-color: #ffffff;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.content h2 {
+    text-align: center;
+    color: #1e3c72;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+}
+
+.content p {
+    font-size: 1.2em;
+    text-align: justify;
+    margin-bottom: 20px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.content ul {
+    list-style-type: disc;
+    padding-left: 40px;
+    color: #333333;
+    margin-bottom: 20px;
+}
+
+.state-image {
+    display: block;
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.state-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Виділення важливих цитат та моментів */
+.highlight {
+    background-color: #e0f7fa;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+/* Секція тесту */
+.quiz-section {
+    background-color: #f9f5ff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+    animation: fadeInUp 1s ease-out;
+    text-align: center;
+}
+
+.quiz-section h3 {
+    color: #1e3c72;
+    font-size: 1.8em;
+    margin-bottom: 25px;
+}
+
+.quiz-form {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.quiz-question {
+    margin-bottom: 20px;
+}
+
+.quiz-options {
+    list-style-type: none;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.quiz-options li {
+    margin-bottom: 10px;
+    width: 100%;
+    max-width: 600px;
+}
+
+.quiz-options button {
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #f0f8ff;
+    border: 2px solid #1e3c72;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.quiz-options button:hover {
+    background-color: #1e3c72;
+    color: #ffffff;
+}
+
+.quiz-options button.selected {
+    background-color: #1e3c72;
+    color: #ffffff;
+}
+
+.quiz-options button.correct-answer {
+    background-color: #28a745 !important;
+    color: #ffffff !important;
+    border: 2px solid #28a745 !important;
+}
+
+.quiz-options button.incorrect-answer {
+    background-color: #dc3545 !important;
+    color: #ffffff !important;
+    border: 2px solid #dc3545 !important;
+}
+
+.quiz-options button.correct-answer:focus,
+.quiz-options button.incorrect-answer:focus {
+    outline: none;
+}
+
+.quiz-options button.correct-answer:hover,
+.quiz-options button.incorrect-answer:hover {
+    background-color: #28a745;
+    color: #ffffff;
+    border: 2px solid #28a745;
+}
+
+.quiz-options button.correct-answer.correct-answer,
+.quiz-options button.incorrect-answer.incorrect-answer {
+    cursor: default;
+}
+
+.quiz-options button:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.quiz-options button.selected {
+    background-color: #1e3c72;
+    color: #ffffff;
+}
+
+/* Стиль для кнопки відправки */
+.button {
+    display: block;
+    width: 200px;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #1e3c72;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #2a5298;
+}
+
+.image-with-caption {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.image-caption {
+    font-size: 0.9em;
+    color: #7f8c8d;
+    margin-top: 8px;
+}
+
+/* Стиль для результату */
+.feedback {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 5px;
+    display: none;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.feedback.correct {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.feedback.incorrect {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+/* Стиль для підсвічування правильних відповідей */
+.quiz-question.correct-answer button.correct {
+    background-color: #d4edda;
+    border-color: #155724;
+    color: #155724;
+}
+
+.quiz-question.incorrect-answer button.incorrect {
+    background-color: #f8d7da;
+    border-color: #721c24;
+    color: #721c24;
+}
+
+/* Анімація появи секції */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Стилі для правильних відповідей */
+.correct {
+    background-color: #d4edda !important;
+    border-color: #155724 !important;
+    color: #155724 !important;
+}
+
+/* Стилі для неправильних відповідей */
+.incorrect {
+    background-color: #f8d7da !important;
+    border-color: #721c24 !important;
+    color: #721c24 !important;
+}
+
+/* Адаптивність для мобільних пристроїв */
+@media (max-width: 768px) {
+    .nav-menu {
+        flex-direction: column;
+        display: none;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .toggle-button {
+        display: flex;
+    }
+
+    .hero h1 {
+        font-size: 2.5em;
+    }
+
+    .hero p {
+        font-size: 1.2em;
+    }
+
+    .content h2, .quiz-section h3 {
+        font-size: 2em;
+    }
+
+    .content p, .quiz-question h4 {
+        font-size: 1em;
+        padding: 0 10px;
+    }
+
+    .state-image, .quiz-options button {
+        max-width: 100%;
+    }
+}

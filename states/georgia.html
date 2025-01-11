@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Georgia - The First 13 American States</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrQdP2v6/UYbVx3AnWDrjH2UY6j6VMnVq3E13ujc0nBt8N3p19KcfmGqOk4GJqI6gZr30HBwSxGjkL7ZsQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles_georgia.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <h2 class="history-header">
+                <a href="../main.html" class="main-header-link" aria-label="Перейти на головну сторінку">The First 13 American States</a>
+            </h2>
+            <p>Explore the rich history of the original thirteen colonies...</p>
+        </div>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="container">
+            <span class="toggle-button" aria-label="Toggle Navigation Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </span>
+            <ul class="nav-menu">
+                <li><a href="../introduction.html">Introduction</a></li>
+                <li class="dropdown">
+                    <a href="#states" class="dropbtn">States <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="delaware.html">Delaware</a>
+                        <a href="pennsylvania.html">Pennsylvania</a>
+                        <a href="new-jersey.html">New Jersey</a>
+                        <a href="georgia.html">Georgia</a>
+                        <a href="connecticut.html">Connecticut</a>
+                        <a href="massachusetts.html">Massachusetts</a>
+                        <a href="maryland.html">Maryland</a>
+                        <a href="south-carolina.html">South Carolina</a>
+                        <a href="new-hampshire.html">New Hampshire</a>
+                        <a href="virginia.html">Virginia</a>
+                        <a href="new-york.html">New York</a>
+                        <a href="north-carolina.html">North Carolina</a>
+                        <a href="rhode-island.html">Rhode Island</a>
+                    </div>
+                </li>
+                <li><a href="../history.html">History</a></li>
+                <li><a href="../conclusion.html">Conclusion</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Georgia</h1>
+            <p>The Peach State and Empire of the South</p>
+        </div>
+    </section>
+
+    <!-- Main Content Section -->
+    <section class="content">
+        <div class="container">
+            <h2>Discovering Georgia</h2>
+            <img src="../images/Georgia.png" alt="Atlanta, Capital of Georgia" class="state-image">
+            <p>
+                Georgia is a state in the southeastern United States, bordered by Florida, Alabama, Tennessee, North Carolina, and South Carolina. It is the 24th largest state by area and the 8th most populous state. It has 159 counties and its capital is Atlanta. It is known as the “Peach State” for its peach production and the “Empire State of the South” for its economic and cultural influence. It is also famous for its history, music, and natural beauty.
+            </p>
+            <p>
+                Georgia has a long and rich history, dating back to the Native American tribes that inhabited the region, such as the Creek, the Cherokee, the Seminole, and others. It was explored and colonized by the Spanish, the French, and the English, who established trading posts and settlements along the coast and the rivers. It was the fourth state to ratify the U.S. Constitution on January 2, 1788. It was the site of many important events and battles during the American Revolution, such as the Siege of Savannah, the Battle of Kettle Creek, and the Battle of Augusta. It was also the site of the Yazoo land fraud, one of the largest land scandals in U.S. history, in which four companies bribed the state legislature to sell them 35 million acres of land at a fraction of its value.
+            </p>
+            <p>
+                Georgia was a slave state that supported the Confederate States of America (Confederacy) during the American Civil War. It seceded from the Union on January 19, 1861 and joined the Confederacy on February 4, 1861. It contributed more than 100,000 soldiers to the Confederate cause, as well as many resources and supplies. It was the site of many major battles and campaigns, such as the Atlanta Campaign, the Battle of Chickamauga, the Battle of Peachtree Creek, the Battle of Atlanta, the Battle of Jonesboro, and the March to the Sea. It was the last state to be restored to the Union on July 15, 1870, after a period of Reconstruction.
+            </p>
+            <p>
+                Georgia has a diverse and dynamic economy, based on agriculture, manufacturing, service, and technology. It is one of the leading producers of cotton, peanuts, pecans, peaches, poultry, and eggs in the country. It also has a strong industrial sector, with major industries such as aerospace, automotive, textiles, paper, and chemicals. It is home to some of the largest and most successful corporations in the world, such as Coca-Cola, Delta Air Lines, Home Depot, UPS, and CNN. It is also a major hub for education, research, and innovation, with many prestigious universities and institutions, such as the Georgia Institute of Technology, Emory University, the University of Georgia, and the Centers for Disease Control and Prevention.
+            </p>
+            <p>
+                Georgia has a vibrant and diverse culture, influenced by its Native American, European, African, and Asian heritage. It has a variety of festivals, events, and traditions, such as the Georgia State Fair, the Georgia Peach Festival, the Georgia National Rodeo, and the Georgia Renaissance Festival.
+            </p>
+        </div>
+    </section>
+
+    <!-- Quiz Section -->
+    <section class="quiz-section">
+        <div class="container">
+            <h3>Quiz: Test Your Knowledge about Georgia</h3>
+            <form class="quiz-form" id="quizForm">
+                <div class="quiz-question" id="q1">
+                    <h4>1. What is Georgia known as due to its peach production?</h4>
+                    <ul class="quiz-options">
+                        <li><button type="button" onclick="selectAnswer('q1', 'a')"> The Cotton State</button></li>
+                        <li><button type="button" onclick="selectAnswer('q1', 'b')"> The Empire State of the South</button></li>
+                        <li><button type="button" onclick="selectAnswer('q1', 'c')"> The Peach State</button></li>
+                    </ul>
+                </div>
+
+                <div class="quiz-question" id="q2">
+                    <h4>2. In what year did Georgia ratify the U.S. Constitution?</h4>
+                    <ul class="quiz-options">
+                        <li><button type="button" onclick="selectAnswer('q2', 'a')"> 1776</button></li>
+                        <li><button type="button" onclick="selectAnswer('q2', 'b')"> 1788</button></li>
+                        <li><button type="button" onclick="selectAnswer('q2', 'c')"> 1870</button></li>
+                    </ul>
+                </div>
+
+                <div class="quiz-question" id="q3">
+                    <h4>3. Which Native American tribes inhabited Georgia?</h4>
+                    <ul class="quiz-options">
+                        <li><button type="button" onclick="selectAnswer('q3', 'a')"> Sioux, Apache, and Navajo</button></li>
+                        <li><button type="button" onclick="selectAnswer('q3', 'b')"> Creek, Cherokee, and Seminole</button></li>
+                        <li><button type="button" onclick="selectAnswer('q3', 'c')"> Iroquois, Algonquin, and Huron</button></li>
+                    </ul>
+                </div>
+
+                <div class="quiz-question" id="q4">
+                    <h4>4. Georgia was the last state to be restored to the Union after the Civil War. In what year did this occur?</h4>
+                    <ul class="quiz-options">
+                        <li><button type="button" onclick="selectAnswer('q4', 'a')"> 1861</button></li>
+                        <li><button type="button" onclick="selectAnswer('q4', 'b')"> 1865</button></li>
+                        <li><button type="button" onclick="selectAnswer('q4', 'c')"> 1870</button></li>
+                    </ul>
+                </div>
+
+                <div class="quiz-question" id="q5">
+                    <h4>5. Which of the following is NOT listed as a major industry in Georgia?</h4>
+                    <ul class="quiz-options">
+                        <li><button type="button" onclick="selectAnswer('q5', 'a')"> Aerospace</button></li>
+                        <li><button type="button" onclick="selectAnswer('q5', 'b')"> Shipbuilding</button></li>
+                        <li><button type="button" onclick="selectAnswer('q5', 'c')"> Textiles</button></li>
+                    </ul>
+                </div>
+
+                <button type="button" class="button" id="submit-quiz">Submit answers</button>
+            </form>
+            <div id="quiz-feedback" class="feedback"></div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 The First 13 American States. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="quiz.js"></script>
+</body>
+</html>

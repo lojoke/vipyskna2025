@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delaware - The First State</title>
+    <link rel="stylesheet" href="styles_delaware.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrQdP2v6/UYbVx3AnWDrjH2UY6j6VMnVq3E13ujc0nBt8N3p19KcfmGqOk4GJqI6gZr30HBwSxGjkL7ZsQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <h2 class="history-header">
+                <a href="../main.html" class="main-header-link" aria-label="Перейти на головну сторінку">The First 13 American States</a>
+            </h2>
+            <p>Exploring the Foundations of the United States</p>
+        </div>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="container">
+            <span class="toggle-button" aria-label="Toggle Navigation Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </span>
+            <ul class="nav-menu">
+                <li><a href="../introduction.html">Introduction</a></li>
+                <li class="dropdown">
+                    <a href="#states" class="dropbtn">States</a>
+                    <div class="dropdown-content">
+                        <a href="delaware.html">Delaware</a>
+                        <a href="pennsylvania.html">Pennsylvania</a>
+                        <a href="new-jersey.html">New Jersey</a>
+                        <a href="georgia.html">Georgia</a>
+                        <a href="connecticut.html">Connecticut</a>
+                        <a href="massachusetts.html">Massachusetts</a>
+                        <a href="maryland.html">Maryland</a>
+                        <a href="south-carolina.html">South Carolina</a>
+                        <a href="new-hampshire.html">New Hampshire</a>
+                        <a href="virginia.html">Virginia</a>
+                        <a href="new-york.html">New York</a>
+                        <a href="north-carolina.html">North Carolina</a>
+                        <a href="rhode-island.html">Rhode Island</a>
+                    </div>
+                </li>
+                <li><a href="../history.html">History</a></li>
+                <li><a href="../conclusion.html">Conclusion</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <div class="container delaware-section">
+            <h2>Delaware</h2>
+            <img src="../images/delaware.png" alt="Delaware History" class="state-image">
+            <blockquote class="highlight">
+                "Delaware was the first state to ratify the U.S. Constitution, earning it the title of 'The First State.'"
+            </blockquote>
+            <p>
+                Delaware is a small state in the eastern United States, located on the Atlantic coast. It is the second smallest state by area and the sixth most densely populated state. It has three counties: New Castle, Kent, and Sussex. Its capital is Dover and its largest city is Wilmington. It is known as the “First State” because it was the first to ratify the U.S. Constitution in 1787. It is also called the “Diamond State” because of its strategic location and the “Blue Hen State” because of its official state bird.
+            </p>
+            <p>
+                Delaware has a rich and diverse history, dating back to the early colonization of North America by European settlers. It was originally inhabited by Native American tribes such as the Lenni Lenape, the Susquehanna, the Nanticoke, and others. It was explored by the Dutch, the Swedish, and the English, who established trading posts and settlements along the Delaware River and Bay. It was part of the Dutch colony of New Netherland, the Swedish colony of New Sweden, and the English colony of Pennsylvania, until it declared its independence in 1776. It was one of the Thirteen Colonies that rebelled against British rule and formed the United States of America. It was the site of several important events and battles during the American Revolution, such as the Battle of Cooch’s Bridge and the Battle of Brandywine. It was also a slave state that remained loyal to the Union during the Civil War.
+            </p>
+            <p>
+                Delaware has a diverse and dynamic economy, based on agriculture, manufacturing, banking, and tourism. It is one of the leading producers of poultry, especially broiler chickens, in the country. It also grows corn, soybeans, wheat, and other crops. It has a strong industrial sector, with major companies such as DuPont, Chemours, and Gore-Tex operating in the state. It is also a major financial center, with many banks and corporations incorporated in the state, due to its favorable tax laws and business-friendly regulations. It attracts millions of visitors every year, who enjoy its beaches, parks, museums, and historical sites.
+            </p>
+            <p>
+                Delaware has a vibrant and diverse culture, influenced by its Native American, European, African, and Asian heritage. It has a variety of festivals, events, and traditions, such as the Delaware State Fair, the Dover Days Festival, the Apple Scrapple Festival, and the Return Day Parade. It has a rich musical and artistic scene, with genres such as jazz, blues, rock, and hip hop, and artists such as Cab Calloway, George Thorogood, and Joe Biden. It has a distinctive cuisine, featuring dishes such as scrapple, chicken and dumplings, crab cakes, and peach pie. It has a proud sports legacy, with teams such as the Delaware Blue Hens, the Wilmington Blue Rocks, and the Delaware 87ers, and athletes such as Elena Delle Donne, Dwayne Henry, and Delino DeShields.
+            </p>
+        </div>
+
+<!-- Interactive Quiz Section -->
+<section class="quiz-section">
+    <h3>Delaware Knowledge Quiz</h3>
+    <form id="quiz-form" class="quiz-form">
+        <div class="quiz-question">
+            <p><strong>1. Why is Delaware known as the "First State"?</strong></p>
+            <ul class="quiz-options">
+                <li>
+                    <button type="button" onclick="selectAnswer('q1', 'a')"> It was the first state discovered by European settlers.</button>
+                </li>
+                <li>
+                    <button type="button" onclick="selectAnswer('q1', 'b')"> It was the first state to ratify the U.S. Constitution in 1787.</button>
+                </li>
+                <li>
+                    <button type="button" onclick="selectAnswer('q1', 'c')"> It was the first state to declare independence from British rule.</button>
+                </li>
+            </ul>
+        </div>
+
+        <div class="quiz-question">
+            <p><strong>2. What is the capital of Delaware?</strong></p>
+            <ul class="quiz-options">
+                <li>
+                    <button type="button" onclick="selectAnswer('q2', 'a')"> Wilmington</button>
+                </li>
+                <li>
+                    <button type="button" onclick="selectAnswer('q2', 'b')"> Dover</button>
+                </li>
+                <li>
+                    <button type="button" onclick="selectAnswer('q2', 'c')"> New Castle</button>
+                </li>
+            </ul>
+        </div>
+
+        <div class="quiz-question">
+            <p><strong>3. Delaware is also referred to as the "Diamond State" because of its:</strong></p>
+            <ul class="quiz-options">
+                <li>
+                    <button type="button" onclick="selectAnswer('q3', 'a')"> Wealth in diamond mines.</button>
+                </li>
+                <li>
+                    <button type="button" onclick="selectAnswer('q3', 'b')"> Abundance of diamond-shaped landmarks.</button>
+                </li>
+                <li>
+                    <button type="button" onclick="selectAnswer('q3', 'c')"> Strategic location.</button>
+                </li>
+            </ul>
+        </div>
+
+        <div class="quiz-question">
+            <p><strong>4. Which of the following tribes originally inhabited Delaware?</strong></p>
+            <ul class="quiz-options">
+                <li>
+                    <button type="button" onclick="selectAnswer('q4', 'a')"> Lenni Lenape, Susquehanna, and Nanticoke</button>
+                </li>
+                <li>
+                    <button type="button" onclick="selectAnswer('q4', 'b')"> Navajo, Apache, and Sioux</button>
+                </li>
+                <li>
+                    <button type="button" onclick="selectAnswer('q4', 'c')"> Aztec, Maya, and Inca</button>
+                </li>
+            </ul>
+        </div>
+
+        <div class="quiz-question">
+            <p><strong>5. During the Civil War, Delaware was:</strong></p>
+            <ul class="quiz-options">
+                <li>
+                    <button type="button" onclick="selectAnswer('q5', 'a')"> A Confederate state that seceded from the Union.</button>
+                </li>
+                <li>
+                    <button type="button" onclick="selectAnswer('q5', 'b')"> Neutral and did not participate in the war.</button>
+                </li>
+                <li>
+                    <button type="button" onclick="selectAnswer('q5', 'c')"> A Union state that allowed slavery.</button>
+                </li>
+            </ul>
+        </div>
+
+        <div class="quiz-question">
+            <p><strong>6. Delaware's economy is heavily based on:</strong></p>
+            <ul class="quiz-options">
+                <li>
+                    <button type="button" onclick="selectAnswer('q6', 'a')"> Oil refining and export.</button>
+                </li>
+                <li>
+                    <button type="button" onclick="selectAnswer('q6', 'b')"> Agriculture, manufacturing, banking, and tourism.</button>
+                </li>
+                <li>
+                    <button type="button" onclick="selectAnswer('q6', 'c')"> Fishing and marine trade.</button>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="quiz-question">
+            <p><strong>7. Which festival is NOT mentioned as being celebrated in Delaware?</strong></p>
+            <ul class="quiz-options">
+                <li>
+                    <button type="button" onclick="selectAnswer('q7', 'a')"> Delaware State Fair</button>
+                </li>
+                <li>
+                    <button type="button" onclick="selectAnswer('q7', 'b')"> Burning Man Festival</button>
+                </li>
+                <li>
+                    <button type="button" onclick="selectAnswer('q7', 'c')"> Apple Scrapple Festival</button>
+                </li>
+            </ul>
+        </div>
+
+        <div class="quiz-question">
+            <p><strong>8. The official state bird of Delaware is the:</strong></p>
+            <ul class="quiz-options">
+                <li>
+                    <button type="button" onclick="selectAnswer('q8', 'a')"> Blue Hen</button>
+                </li>
+                <li>
+                    <button type="button" onclick="selectAnswer('q8', 'b')"> Bald Eagle</button>
+                </li>
+                <li>
+                    <button type="button" onclick="selectAnswer('q8', 'c')"> Cardinal</button>
+                </li>
+            </ul>
+        </div>
+
+        <div class="quiz-question">
+            <p><strong>9. Which of the following companies is mentioned as operating in Delaware?</strong></p>
+            <ul class="quiz-options">
+                <li>
+                    <button type="button" onclick="selectAnswer('q9', 'a')"> Apple Inc.</button>
+                </li>
+                <li>
+                    <button type="button" onclick="selectAnswer('q9', 'b')"> DuPont</button>
+                </li>
+                <li>
+                    <button type="button" onclick="selectAnswer('q9', 'c')"> Tesla Motors</button>
+                </li>
+            </ul>
+        </div>
+
+        <div class="quiz-question">
+            <p><strong>10. Who among the following is NOT listed as an artist or athlete from Delaware?</strong></p>
+            <ul class="quiz-options">
+                <li>
+                    <button type="button" onclick="selectAnswer('q10', 'a')"> Cab Calloway</button>
+                </li>
+                <li>
+                    <button type="button" onclick="selectAnswer('q10', 'b')"> Joe Biden</button>
+                </li>
+                <li>
+                    <button type="button" onclick="selectAnswer('q10', 'c')"> LeBron James</button>
+                </li>
+            </ul>
+        </div>
+
+        <button type="button" id="submit-quiz" class="button"><i class="fas fa-paper-plane"></i> Submit Answers</button>
+    </form>
+    <div id="quiz-feedback" class="feedback"></div>
+</section>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 The First 13 American States. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="quiz.js"></script>
+</body>
+</html>

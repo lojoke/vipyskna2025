@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>North Carolina - The First 13 American States</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrQdP2v6/UYbVx3AnWDrjH2UY6j6VMnVq3E13ujc0nBt8N3p19KcfmGqOk4GJqI6gZr30HBwSxGjkL7ZsQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles_north-carolina.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <h2 class="history-header">
+                <a href="../main.html" class="main-header-link" aria-label="Перейти на головну сторінку">The First 13 American States</a>
+            </h2>
+            <p>Explore the rich history of the original thirteen colonies...</p>
+        </div>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="container">
+            <span class="toggle-button" aria-label="Toggle Navigation Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </span>
+            <ul class="nav-menu">
+                <li><a href="../introduction.html">Introduction</a></li>
+                <li class="dropdown">
+                    <a href="#states" class="dropbtn">States <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="delaware.html">Delaware</a>
+                        <a href="pennsylvania.html">Pennsylvania</a>
+                        <a href="new-jersey.html">New Jersey</a>
+                        <a href="georgia.html">Georgia</a>
+                        <a href="connecticut.html">Connecticut</a>
+                        <a href="massachusetts.html">Massachusetts</a>
+                        <a href="maryland.html">Maryland</a>
+                        <a href="south-carolina.html">South Carolina</a>
+                        <a href="new-hampshire.html">New Hampshire</a>
+                        <a href="virginia.html">Virginia</a>
+                        <a href="new-york.html">New York</a>
+                        <a href="north-carolina.html">North Carolina</a>
+                        <a href="rhode-island.html">Rhode Island</a>
+                    </div>
+                </li>
+                <li><a href="../history.html">History</a></li>
+                <li><a href="../conclusion.html">Conclusion</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <img src="../images/North-Carolina.jpg" alt="North Carolina Landscape" class="hero-image">
+        <div class="hero-content">
+            <h1>North Carolina</h1>
+            <p>The Tar Heel State: A Blend of Tradition and Innovation</p>
+        </div>
+    </section>
+
+    <!-- Main Content Section -->
+    <section class="content">
+        <div class="container">
+            <h2>Discovering North Carolina</h2>
+            <p>
+                North Carolina is a state in the southeastern United States, with a long and diverse history, from its Native American origins to its modern achievements. It is the birthplace of many presidents, patriots, and pioneers, as well as the site of many battles, revolutions, and innovations. It is also a state with a diverse and beautiful landscape, from its mountains and valleys to its rivers and coastlines.
+            </p>
+            <h3>Facts and Information about North Carolina:</h3>
+            <ul>
+                <li>It was the 12th state to ratify the U.S. Constitution on November 21, 1789.</li>
+                <li>It was the home of the Research Triangle Park, one of the largest research and development centers in the world, and the Charlotte Douglas International Airport, the 11th busiest airport in the world.</li>
+                <li>It was the origin of many cultural and social movements, such as the Moravian Church, the Mecklenburg Declaration of Independence, the Wilmington Insurrection of 1898, and the Greensboro sit-ins.</li>
+                <li>It was the site of many historical events and conflicts, such as the Lost Colony of Roanoke, the Tuscarora War, the Regulator Movement, the American Revolution, the War of 1812, the Civil War, the Wright brothers’ first flight, and the Lumbee Rebellion.</li>
+                <li>It was the birthplace or residence of many famous people, such as Andrew Jackson, James K. Polk, Andrew Johnson, Edward R. Murrow, Billy Graham, Michael Jordan, and Maya Angelou.</li>
+                <li>It was the leading producer of tobacco, sweet potatoes, and turkeys in the country.</li>
+                <li>It had more than 300 miles of coastline, including the Outer Banks, a chain of barrier islands that are home to the Cape Hatteras National Seashore and the Cape Lookout National Seashore.</li>
+            </ul>
+            <figure class="image-with-caption">
+                <img src="../images/North-Carolina-history.jpg" alt="North Carolina History" class="state-image">
+                <figcaption class="image-caption">John White and others as they find a tree into which is carved the word 'Croatoan,' Roanoke Island, North Carolina, 1590.</figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <!-- Quiz Section -->
+    <section class="quiz-section">
+        <div class="container">
+            <h3>Exercise 12 (North Carolina): Test Your Knowledge</h3>
+            <form class="quiz-form" id="quizForm">
+                <div class="quiz-question" id="q1">
+                    <h4>1. North Carolina ratified the U.S. Constitution as the ___ state.</h4>
+                    <ul class="quiz-options">
+                        <li><button type="button" onclick="selectAnswer('q1', 'a')"> 10th</button></li>
+                        <li><button type="button" onclick="selectAnswer('q1', 'b')"> 12th</button></li>
+                        <li><button type="button" onclick="selectAnswer('q1', 'c')"> 15th</button></li>
+                        <li><button type="button" onclick="selectAnswer('q1', 'd')"> 20th</button></li>
+                    </ul>
+                </div>
+
+                <div class="quiz-question" id="q2">
+                    <h4>2. Which of the following is NOT a cultural or social movement originating in North Carolina?</h4>
+                    <ul class="quiz-options">
+                        <li><button type="button" onclick="selectAnswer('q2', 'a')"> The Moravian Church</button></li>
+                        <li><button type="button" onclick="selectAnswer('q2', 'b')"> The Mecklenburg Declaration of Independence</button></li>
+                        <li><button type="button" onclick="selectAnswer('q2', 'c')"> The Boston Tea Party</button></li>
+                        <li><button type="button" onclick="selectAnswer('q2', 'd')"> The Greensboro sit-ins</button></li>
+                    </ul>
+                </div>
+
+                <div class="quiz-question" id="q3">
+                    <h4>3. The first flight by the Wright brothers took place in:</h4>
+                    <ul class="quiz-options">
+                        <li><button type="button" onclick="selectAnswer('q3', 'a')"> Kitty Hawk, North Carolina</button></li>
+                        <li><button type="button" onclick="selectAnswer('q3', 'b')"> Charlotte, North Carolina</button></li>
+                        <li><button type="button" onclick="selectAnswer('q3', 'c')"> Raleigh, North Carolina</button></li>
+                        <li><button type="button" onclick="selectAnswer('q3', 'd')"> Asheville, North Carolina</button></li>
+                    </ul>
+                </div>
+
+                <div class="quiz-question" id="q4">
+                    <h4>4. Which of the following is North Carolina known to be the leading producer of?</h4>
+                    <ul class="quiz-options">
+                        <li><button type="button" onclick="selectAnswer('q4', 'a')"> Rice</button></li>
+                        <li><button type="button" onclick="selectAnswer('q4', 'b')"> Cotton</button></li>
+                        <li><button type="button" onclick="selectAnswer('q4', 'c')"> Tobacco</button></li>
+                        <li><button type="button" onclick="selectAnswer('q4', 'd')"> Wheat</button></li>
+                    </ul>
+                </div>
+
+                <div class="quiz-question" id="q5">
+                    <h4>5. The Outer Banks in North Carolina are famous for:</h4>
+                    <ul class="quiz-options">
+                        <li><button type="button" onclick="selectAnswer('q5', 'a')"> Being the largest city</button></li>
+                        <li><button type="button" onclick="selectAnswer('q5', 'b')"> Their historical significance in the Civil War</button></li>
+                        <li><button type="button" onclick="selectAnswer('q5', 'c')"> A chain of barrier islands</button></li>
+                        <li><button type="button" onclick="selectAnswer('q5', 'd')"> The birthplace of several U.S. presidents</button></li>
+                    </ul>
+                </div>
+
+                <button type="button" class="button" id="submit-quiz">Submit answers</button>
+            </form>
+            <div id="quiz-feedback" class="feedback"></div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 The First 13 American States. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="quiz.js"></script>
+</body>
+</html>

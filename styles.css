@@ -1,0 +1,797 @@
+/* styles.css */
+
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333333;
+    line-height: 1.6;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* Header */
+header {
+    background-color: #1e3c72; /* Blue Shade */
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+}
+
+header .site-header {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+header .site-subheader {
+    font-size: 1.3em;
+    margin-top: 10px;
+}
+
+/* Navigation Menu */
+nav {
+    background-color: #333333;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-menu li {
+    position: relative;
+}
+
+.nav-menu li a {
+    display: block;
+    padding: 15px 20px;
+    color: #ffffff;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-menu li a:hover {
+    background-color: #575757;
+    color: #ffffff;
+}
+
+/* Dropdown Menu */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333333;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    top: 50px;
+    left: 0;
+    z-index: 1001;
+}
+
+.dropdown-content a {
+    color: #ffffff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #575757;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Toggle Button for Mobile */
+.toggle-button {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 15px;
+}
+
+.toggle-button .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #ffffff;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+/* Додаткові стилі для титульної сторінки */
+.title-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #ffffff;
+}
+
+.title-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: #1e3c72;
+}
+
+.title-section h3 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    color: #1e3c72;
+}
+
+.title-section .perfsupervisors {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.title-section .performer, .title-section .supervisors {
+    width: 48%;
+}
+
+.title-section .performer p, .title-section .supervisors p {
+    text-align: right;
+    font-size: 1.1em;
+    margin: 5px 0;
+}
+
+.title-section .location-date {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 1.2em;
+    color: #555555;
+}
+
+/* Оновлення стилів для героїчного розділу */
+.hero-main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+    color: white;
+}
+
+.hero-main-content h2, .hero-main-content h3, .hero-main-content p {
+    margin: 10px 0;
+}
+
+/* Приховати кнопку "Explore Now", оскільки ми її замінюємо титульною сторінкою */
+.hero-main-content .btn-primary {
+    display: none;
+}
+
+/* Адаптивність для нових елементів */
+@media (max-width: 768px) {
+    .title-section .performer, .title-section .supervisors {
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero-main-content {
+        padding: 20px;
+    }
+}
+
+
+/* Hero Section */
+.hero-main {
+    background-image: url('images/main-hero.jpg'); /* Replace with appropriate image */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 150px 0;
+    text-align: center;
+    position: relative;
+}
+
+.hero-main::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(30, 60, 114, 0.6); /* Semi-transparent layer for text readability */
+    z-index: 1;
+}
+
+.hero-main-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-main h1 {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero-main p {
+    font-size: 1.5em;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+.btn-primary {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 30px;
+    background-color: #ff9800;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #e68900;
+}
+
+/* Features Section */
+.features {
+    padding: 50px 0;
+    background-color: #ffffff;
+}
+
+.features h2 {
+    text-align: center;
+    color: #1e3c72;
+    font-size: 3em;
+    margin-bottom: 40px;
+}
+
+.features-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.feature-item {
+    flex: 1 1 250px;
+    max-width: 300px;
+    text-align: center;
+}
+
+.feature-item i {
+    color: #1e3c72;
+    margin-bottom: 15px;
+}
+
+.feature-item h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.feature-item p {
+    font-size: 1.2em;
+    color: #555555;
+}
+
+/* Carousel Section */
+.carousel-section {
+    padding: 50px 0;
+    background-color: #f4f4f4;
+    position: relative;
+}
+
+.carousel-section h2 {
+    text-align: center;
+    color: #1e3c72;
+    font-size: 3em;
+    margin-bottom: 40px;
+}
+
+.map-section h2 {
+    text-align: center;
+    color: #1e3c72;
+    font-size: 3em;
+    margin-bottom: 40px;
+}
+
+.carousel {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 10px;
+    height: 400px; /* Fixed height to ensure visibility */
+}
+
+.carousel-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
+}
+
+.carousel-item.active {
+    opacity: 1;
+    visibility: visible;
+    z-index: 1;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-caption {
+    position: absolute;
+    bottom: 20px;
+    left: 30px;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-caption h3 {
+    margin: 0;
+    font-size: 1.8em;
+}
+
+.carousel-caption p {
+    margin: 5px 0 0 0;
+    font-size: 1.2em;
+}
+
+/* Carousel Controls */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    transition: background-color 0.3s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Overview Section */
+.overview {
+    padding: 50px 0;
+    background-color: #ffffff;
+}
+
+.overview h2 {
+    text-align: center;
+    color: #1e3c72;
+    font-size: 3em;
+    margin-bottom: 40px;
+}
+
+
+.states-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.state-card {
+    background-color: #f9f9f9;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.state-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.state-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.state-card h3 {
+    color: #1e3c72;
+    font-size: 1.8em;
+    margin: 15px 0 10px 0;
+}
+
+.btn-secondary {
+    display: inline-block;
+    margin-bottom: 15px;
+    padding: 10px 20px;
+    background-color: #1e3c72;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: #2a5298;
+}
+
+.cta {
+    padding: 50px 0;
+    background-color: #ff9800;
+    text-align: center;
+    color: white;
+}
+
+.cta h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.cta p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.cta .btn-primary {
+    background-color: #ffffff;
+    color: #1e3c72;
+}
+
+.cta .btn-primary:hover {
+    background-color: #f0f0f0;
+}
+
+        /* Інтерактивна Карта */
+        .interactive-map {
+            padding: 50px 0;
+            background-color: #ffffff;
+            text-align: center;
+        }
+
+        .interactive-map h2 {
+            color: #1e3c72;
+            font-size: 3em;
+            margin-bottom: 40px;
+        }
+
+        .map-container {
+            position: relative;
+            display: inline-block;
+            width: 80%;
+            max-width: 800px;
+        }
+
+        .map-container svg {
+            width: 100%;
+            height: auto;
+        }
+
+        .state {
+            fill: #1e3c72;
+            cursor: pointer;
+            transition: fill 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .state:hover {
+            fill: #ff9800;
+            transform: scale(1.05);
+            box-shadow: 0 0 10px rgba(0,0,0,0.3);
+        }
+
+                /* Секція інтерактивної карти */
+                .interactive-map {
+            position: relative;
+            margin: 40px 0;
+        }
+
+        .interactive-map svg {
+            width: 100%;
+            height: auto;
+        }
+
+        .tooltip {
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            padding: 8px;
+            border-radius: 4px;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.3s;
+            z-index: 1000;
+        }
+
+        .tooltip.visible {
+            opacity: 1;
+        }
+
+        /* Секція заклику до дії */
+        .cta {
+            background: #007BFF;
+            color: #fff;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .cta h2 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .cta p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .cta .btn-primary {
+            background: #fff;
+            color: #007BFF;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .cta .btn-primary:hover {
+            background: #e0e0e0;
+        }
+
+        /* Стилі футера */
+        footer {
+            background: #333;
+            color: #fff;
+            padding: 20px 0;
+        }
+
+        footer .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        footer p {
+            margin-bottom: 10px;
+        }
+
+        /* Адаптивні стилі */
+        @media (max-width: 768px) {
+            nav .container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .toggle-button {
+                display: flex;
+            }
+
+            .nav-menu {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            nav ul {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+        }
+
+        /* Стилі для SVG штатів */
+        .state-path {
+            stroke: #333;
+            stroke-width: 1;
+            fill: #f9f9f9;
+            cursor: pointer;
+            transition: fill 0.3s, stroke 0.3s;
+        }
+
+        .state-path:hover, .state-path:focus {
+            fill: #e0e0e0;
+            stroke: #007BFF;
+            outline: none;
+        }
+
+        /* Tooltip */
+        .tooltip {
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #ffffff;
+            padding: 10px 15px;
+            border-radius: 5px;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            font-size: 1em;
+            max-width: 200px;
+            z-index: 10;
+            transform: translateY(-10px);
+        }
+
+        .tooltip.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+    /* Стилі футера */
+    footer {
+        background: #333;
+        color: #fff;
+        padding: 20px 0;
+    }
+
+    footer .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer p {
+        margin-bottom: 10px;
+    }
+
+
+    /* Адаптивні стилі */
+    @media (max-width: 768px) {
+        nav .container {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .toggle-button {
+            display: flex;
+        }
+
+        .nav-menu {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .nav-menu.active {
+            display: flex;
+        }
+
+        nav ul {
+            flex-direction: column;
+            width: 100%;
+        }
+
+        nav ul li {
+            margin: 10px 0;
+        }
+    }
+
+    /* Стилі для SVG штатів */
+    .state-path {
+        stroke: #333;
+        stroke-width: 1;
+        fill: #f9f9f9;
+        cursor: pointer;
+        transition: fill 0.3s, stroke 0.3s;
+    }
+
+    .state-path:hover, .state-path:focus {
+        fill: #e0e0e0;
+        stroke: #007BFF;
+        outline: none;
+    }
+
+    /* Tooltip */
+    .tooltip {
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.8);
+        color: #ffffff;
+        padding: 10px 15px;
+        border-radius: 5px;
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity 0.3s ease, transform 0.3s ease;
+        font-size: 1em;
+        max-width: 200px;
+        z-index: 10;
+        transform: translateY(-10px);
+    }
+
+    .tooltip.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+/* Footer */
+footer {
+    background-color: #333333;
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .nav-menu {
+        flex-direction: column;
+        display: none;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .toggle-button {
+        display: flex;
+    }
+
+    /* Hero Section */
+    .hero-main h1 {
+        font-size: 2.5em;
+    }
+
+    .hero-main p {
+        font-size: 1.2em;
+    }
+
+    /* Features Section */
+    .features h2, .summary h2, .carousel-section h2 {
+        font-size: 2.5em;
+    }
+
+    .feature-item h3 {
+        font-size: 1.5em;
+    }
+
+    .summary p {
+        font-size: 1em;
+    }
+
+    /* Carousel Controls */
+    .prev, .next {
+        font-size: 18px;
+        padding: 12px;
+    }
+
+    /* State Cards */
+    .state-card h3 {
+        font-size: 1.5em;
+    }
+    
+}

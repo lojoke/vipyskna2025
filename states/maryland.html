@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maryland - The First 13 American States</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrQdP2v6/UYbVx3AnWDrjH2UY6j6VMnVq3E13ujc0nBt8N3p19KcfmGqOk4GJqI6gZr30HBwSxGjkL7ZsQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles_maryland.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <h2 class="history-header">
+                <a href="../main.html" class="main-header-link" aria-label="Перейти на головну сторінку">The First 13 American States</a>
+            </h2>
+            <p>Explore the rich history of the original thirteen colonies...</p>
+        </div>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="container">
+            <span class="toggle-button" aria-label="Toggle Navigation Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </span>
+            <ul class="nav-menu">
+                <li><a href="../introduction.html">Introduction</a></li>
+                <li class="dropdown">
+                    <a href="#states" class="dropbtn">States <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="delaware.html">Delaware</a>
+                        <a href="pennsylvania.html">Pennsylvania</a>
+                        <a href="new-jersey.html">New Jersey</a>
+                        <a href="georgia.html">Georgia</a>
+                        <a href="connecticut.html">Connecticut</a>
+                        <a href="massachusetts.html">Massachusetts</a>
+                        <a href="maryland.html">Maryland</a>
+                        <a href="south-carolina.html">South Carolina</a>
+                        <a href="new-hampshire.html">New Hampshire</a>
+                        <a href="virginia.html">Virginia</a>
+                        <a href="new-york.html">New York</a>
+                        <a href="north-carolina.html">North Carolina</a>
+                        <a href="rhode-island.html">Rhode Island</a>
+                    </div>
+                </li>
+                <li><a href="../history.html">History</a></li>
+                <li><a href="../conclusion.html">Conclusion</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <img src="../images/maryland_landscape.jpg" alt="Maryland Landscape" class="hero-image">
+        <div class="hero-content">
+            <h1>Maryland</h1>
+            <p>The Old Line State, Free State, and Chesapeake Bay State</p>
+        </div>
+    </section>
+
+    <!-- Main Content Section -->
+    <section class="content">
+        <div class="container">
+            <h2>Discovering Maryland</h2>
+            <p>
+                Maryland is a state in the eastern United States, bordered by Pennsylvania, Delaware, Virginia, West Virginia, and the District of Columbia. It is known as the <span class="highlight">“Old Line State”</span> for its role in the American Revolution, the <span class="highlight">“Free State”</span> for its early abolition of slavery, and the <span class="highlight">“Chesapeake Bay State”</span> for its location on the largest estuary in the country. It is also famous for its seafood, especially crabs and oysters.
+            </p>
+            <h3>Facts and Information about Maryland:</h3>
+            <ul>
+                <li>It is the seventh state to ratify the U.S. Constitution on April 28, 1788.</li>
+                <li>It is the 42nd largest state by area and the 19th most populous state.</li>
+                <li>It has 23 counties and its capital is Annapolis. Its largest city is Baltimore.</li>
+                <li>It has the highest median household income and the lowest poverty rate in the nation.</li>
+                <li>It is the only state where all of its counties are classified as metropolitan areas.</li>
+                <li>It is the birthplace of many famous people, such as Francis Scott Key, Harriet Tubman, Frederick Douglass, Babe Ruth, and Thurgood Marshall.</li>
+                <li>It is home to the United States Naval Academy, the National Aquarium, and the Fort McHenry National Monument.</li>
+                <li>It is the leading producer of blue crabs and is renowned for its crab cakes.</li>
+                <li>It has more than 50 state parks and forests, such as Assateague Island State Park, Patapsco Valley State Park, and Catoctin Mountain Park.</li>
+            </ul>
+            <figure class="image-with-caption">
+                <img src="../images/maryland_history.jpg" alt="North Carolina History" class="state-image">
+                <figcaption class="image-caption">Battle of Baltimore 1814</figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <!-- Quiz Section -->
+    <section class="quiz-section">
+        <div class="container">
+            <h3>Exercise 7 (Maryland): Test Your Knowledge</h3>
+            <form class="quiz-form" id="quizForm">
+                <div class="quiz-question" id="q1">
+                    <h4>1. Maryland is known as the "Free State" because of its:</h4>
+                    <ul class="quiz-options">
+                        <li><button type="button" onclick="selectAnswer('q1', 'a')"> Large number of freed slaves during the Civil War</button></li>
+                        <li><button type="button" onclick="selectAnswer('q1', 'b')"> Early abolition of slavery</button></li>
+                        <li><button type="button" onclick="selectAnswer('q1', 'c')"> Role in the American Revolution</button></li>
+                        <li><button type="button" onclick="selectAnswer('q1', 'd')"> None of the above</button></li>
+                    </ul>
+                </div>
+
+                <div class="quiz-question" id="q2">
+                    <h4>2. Which of the following borders Maryland?</h4>
+                    <ul class="quiz-options">
+                        <li><button type="button" onclick="selectAnswer('q2', 'a')"> New York</button></li>
+                        <li><button type="button" onclick="selectAnswer('q2', 'b')"> Ohio</button></li>
+                        <li><button type="button" onclick="selectAnswer('q2', 'c')"> Virginia</button></li>
+                        <li><button type="button" onclick="selectAnswer('q2', 'd')"> Kentucky</button></li>
+                    </ul>
+                </div>
+
+                <div class="quiz-question" id="q3">
+                    <h4>3. Maryland ratified the U.S. Constitution as the ___ state.</h4>
+                    <ul class="quiz-options">
+                        <li><button type="button" onclick="selectAnswer('q3', 'a')"> First</button></li>
+                        <li><button type="button" onclick="selectAnswer('q3', 'b')"> Seventh</button></li>
+                        <li><button type="button" onclick="selectAnswer('q3', 'c')"> Tenth</button></li>
+                        <li><button type="button" onclick="selectAnswer('q3', 'd')"> Twelfth</button></li>
+                    </ul>
+                </div>
+
+                <div class="quiz-question" id="q4">
+                    <h4>4. What is Maryland's largest city?</h4>
+                    <ul class="quiz-options">
+                        <li><button type="button" onclick="selectAnswer('q4', 'a')"> Annapolis</button></li>
+                        <li><button type="button" onclick="selectAnswer('q4', 'b')"> Frederick</button></li>
+                        <li><button type="button" onclick="selectAnswer('q4', 'c')"> Columbia</button></li>
+                        <li><button type="button" onclick="selectAnswer('q4', 'd')"> Baltimore</button></li>
+                    </ul>
+                </div>
+
+                <div class="quiz-question" id="q5">
+                    <h4>5. Maryland is the leading producer of:</h4>
+                    <ul class="quiz-options">
+                        <li><button type="button" onclick="selectAnswer('q5', 'a')"> Cotton</button></li>
+                        <li><button type="button" onclick="selectAnswer('q5', 'b')"> Soybeans</button></li>
+                        <li><button type="button" onclick="selectAnswer('q5', 'c')"> Blue crabs</button></li>
+                        <li><button type="button" onclick="selectAnswer('q5', 'd')"> Wheat</button></li>
+                    </ul>
+                </div>
+
+                <button type="button" class="button" id="submit-quiz">Submit answers</button>
+            </form>
+            <div id="quiz-feedback" class="feedback"></div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 The First 13 American States. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="quiz.js"></script>
+</body>
+</html>

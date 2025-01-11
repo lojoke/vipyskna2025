@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>History - The First 13 American States</title>
+    <!-- Google Fonts для консистентності -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome для іконок -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrQdP2v6/UYbVx3AnWDrjH2UY6j6VMnVq3E13ujc0nBt8N3p19KcfmGqOk4GJqI6gZr30HBwSxGjkL7ZsQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- Вбудовані стилі -->
+    <style>
+        /* Загальні стилі */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333333;
+            line-height: 1.6;
+        }
+        
+        /* Контейнер */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+        
+        /* Шапка */
+        header {
+            background-color: #1e3c72; /* Синій відтінок */
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+        
+        header .history-header a.main-header-link {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 2.5em;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        
+        header .history-header a.main-header-link:hover {
+            color: #d1e0e0;
+        }
+        
+        header p {
+            font-size: 1.3em;
+            margin-top: 10px;
+        }
+        
+        /* Навігаційне меню */
+        nav {
+            background-color: #333333;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .nav-menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .nav-menu li {
+            position: relative;
+        }
+        
+        .nav-menu li a {
+            display: block;
+            padding: 15px 20px;
+            color: #ffffff;
+            text-decoration: none;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        
+        .nav-menu li a:hover {
+            background-color: #575757;
+            color: #ffffff;
+        }
+        
+        /* Випадаюче меню */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #333333;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            top: 50px;
+            left: 0;
+            z-index: 1001;
+        }
+        
+        .dropdown-content a {
+            color: #ffffff;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            transition: background-color 0.3s ease;
+        }
+        
+        .dropdown-content a:hover {
+            background-color: #575757;
+        }
+        
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        
+        /* Toggle Button для мобільних пристроїв */
+        .toggle-button {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 15px;
+        }
+        
+        .toggle-button .bar {
+            width: 25px;
+            height: 3px;
+            background-color: #ffffff;
+            margin: 4px 0;
+            transition: 0.4s;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background-image: url('images/history-hero.jpg'); /* Замініть на відповідне зображення */
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 150px 0;
+            text-align: center;
+            position: relative;
+        }
+        
+        .hero::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(30, 60, 114, 0.6); /* Напівпрозорий шар для покращення читабельності тексту */
+            z-index: 1;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero h1 {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .hero p {
+            font-size: 1.5em;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+        }
+        
+        /* Main Content Section */
+        .history {
+            padding: 50px 0;
+        }
+        
+        .history h2 {
+            text-align: center;
+            color: #1e3c72;
+            font-size: 3em;
+            margin-bottom: 40px;
+        }
+        
+        .history-section {
+            margin-bottom: 60px;
+        }
+        
+        .history-section h3 {
+            color: #1e3c72;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            border-bottom: 3px solid #1e3c72;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+        
+        .history-item {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            margin-bottom: 40px;
+            gap: 20px;
+        }
+        
+        .history-item:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+        
+        .history-item img {
+            width: 100%;
+            max-width: 400px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .history-item img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        
+        .history-item div {
+            flex: 1;
+        }
+        
+        .history-item h4 {
+            color: #333333;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        
+        .history-item p {
+            font-size: 1.2em;
+            text-align: justify;
+        }
+        
+        /* Shared Struggles and Independence */
+        .shared-struggles {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 60px;
+            gap: 20px;
+        }
+        
+        .shared-struggles img {
+            width: 100%;
+            max-width: 600px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .shared-struggles img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        
+        .shared-struggles p {
+            font-size: 1.3em;
+            text-align: justify;
+            max-width: 800px;
+        }
+        
+        /* Legacy */
+        .legacy {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .legacy img {
+            width: 100%;
+            max-width: 600px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .legacy img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        
+        .legacy p {
+            font-size: 1.3em;
+            text-align: justify;
+            max-width: 800px;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #1e3c72;
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+        }
+        
+        /* Адаптивність для мобільних пристроїв */
+        @media (max-width: 992px) {
+            .history-item {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .history-item:nth-child(even) {
+                flex-direction: column;
+            }
+            
+            .history-item img {
+                max-width: 100%;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .toggle-button {
+                display: flex;
+            }
+            
+            .nav-menu {
+                flex-direction: column;
+                display: none;
+                width: 100%;
+                background-color: #333333;
+            }
+            
+            .nav-menu.active {
+                display: flex;
+            }
+            
+            .nav-menu li a {
+                padding: 15px;
+                border-top: 1px solid #575757;
+            }
+            
+            .nav-menu li a:last-child {
+                border-bottom: 1px solid #575757;
+            }
+            
+            .hero h1 {
+                font-size: 2.5em;
+            }
+            
+            .hero p {
+                font-size: 1.2em;
+            }
+            
+            .history-section h3 {
+                font-size: 2em;
+            }
+            
+            .history-item h4 {
+                font-size: 1.5em;
+            }
+            
+            .history-item p, .shared-struggles p, .legacy p {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <h2 class="history-header">
+                <a href="main.html" class="main-header-link" aria-label="Перейти на головну сторінку">The First 13 American States</a>
+            </h2>
+            <p>Explore the rich history of the original thirteen colonies...</p>
+        </div>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="container">
+            <span class="toggle-button" aria-label="Toggle Navigation Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </span>
+            <ul class="nav-menu">
+                <li><a href="introduction.html">Introduction</a></li>
+                <li class="dropdown">
+                    <a href="#states" class="dropbtn">States <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="states/delaware.html">Delaware</a>
+                        <a href="states/pennsylvania.html">Pennsylvania</a>
+                        <a href="states/new-jersey.html">New Jersey</a>
+                        <a href="states/georgia.html">Georgia</a>
+                        <a href="states/connecticut.html">Connecticut</a>
+                        <a href="states/massachusetts.html">Massachusetts</a>
+                        <a href="states/maryland.html">Maryland</a>
+                        <a href="states/south-carolina.html">South Carolina</a>
+                        <a href="states/new-hampshire.html">New Hampshire</a>
+                        <a href="states/virginia.html">Virginia</a>
+                        <a href="states/new-york.html">New York</a>
+                        <a href="states/north-carolina.html">North Carolina</a>
+                        <a href="states/rhode-island.html">Rhode Island</a>
+                    </div>
+                </li>
+                <li><a href="history.html">History</a></li>
+                <li><a href="conclusion.html">Conclusion</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>History of the First 13 States</h1>
+            <p>The foundation of a nation built on diversity and resilience</p>
+        </div>
+    </section>
+
+    <!-- Main Content Section -->
+    <section class="history">
+        <div class="container">
+            <h2>Formation and Evolution of the United States</h2>
+            <p>The abbreviation "U.S." appears in the papers of George Washington in 1791, and the abbreviation "U.S.A." first appeared in 1795. But for two more years after the declaration of independence the name "United States of North America" was officially used; the word "North" was excluded from the name by the decision of the Continental Congress in 1778.</p>
+
+            <!-- Northern Colonies -->
+            <div class="history-section">
+                <h3>Northern Colonies</h3>
+
+                <div class="history-item">
+                    <img src="images/Massachusetts-Colony.jpg" alt="New Hampshire and Massachusetts" class="history-img">
+                    <div>
+                        <h4>New Hampshire and Massachusetts</h4>
+                        <p>Founded by Puritans seeking religious freedom in the 1600s, these colonies embraced strict moral codes and self-sufficiency. Plymouth Colony (1620) and Massachusetts Bay Colony (1630) laid the groundwork for participatory democracy and education.</p>
+                    </div>
+                </div>
+
+                <div class="history-item">
+                    <img src="images/roger-williams-lands-in-the-new-world.jpg" alt="Rhode Island and Connecticut" class="history-img">
+                    <div>
+                        <h4>Rhode Island and Connecticut</h4>
+                        <p>Dissenters from Massachusetts' rigid rule founded these colonies. Roger Williams championed religious tolerance in Rhode Island, while Connecticut emphasized representative government.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Middle Colonies -->
+            <div class="history-section">
+                <h3>Middle Colonies</h3>
+
+                <div class="history-item">
+                    <img src="images/vintage-nyc-tout.jpg" alt="New York and New Jersey" class="history-img">
+                    <div>
+                        <h4>New York and New Jersey</h4>
+                        <p>Originally Dutch settlements, these colonies became diverse hubs of trade and commerce. New York City emerged as a bustling port, while New Jersey offered fertile farmland and religious tolerance.</p>
+                    </div>
+                </div>
+
+                <div class="history-item">
+                    <img src="images/william_penn_10062019_1-645x340.jpg" alt="Pennsylvania and Delaware" class="history-img">
+                    <div>
+                        <h4>Pennsylvania and Delaware</h4>
+                        <p>Founded by William Penn as a Quaker haven, Pennsylvania promoted peace, religious freedom, and tolerance. Delaware, once part of Pennsylvania, later became a separate colony known for its shipbuilding and agriculture.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Southern Colonies -->
+            <div class="history-section">
+                <h3>Southern Colonies</h3>
+
+                <div class="history-item">
+                    <img src="images/Lord Baltimore.jpg" alt="Maryland" class="history-img">
+                    <div>
+                        <h4>Maryland</h4>
+                        <p>Lord Baltimore established Maryland as a haven for Catholics facing persecution in England. It became a center for tobacco cultivation and religious pluralism.</p>
+                    </div>
+                </div>
+
+                <div class="history-item">
+                    <img src="images/seal-states-Virginia-size-arms-scourge-figure-1776.jpg" alt="Virginia" class="history-img">
+                    <div>
+                        <h4>Virginia</h4>
+                        <p>Founded in 1607 as Jamestown, Virginia became the first successful English colony. It relied heavily on indentured servants and later enslaved Africans for labor, primarily cultivating tobacco.</p>
+                    </div>
+                </div>
+
+                <div class="history-item">
+                    <img src="images/South Carolina.jpg" alt="North Carolina and South Carolina" class="history-img">
+                    <div>
+                        <h4>North Carolina and South Carolina</h4>
+                        <p>Initially part of Carolina, these colonies eventually split due to economic and cultural differences. North Carolina retained a more agrarian society, while South Carolina became a wealthy rice-producing colony with a large slave population.</p>
+                    </div>
+                </div>
+
+                <div class="history-item">
+                    <img src="images/Georgia.jpg" alt="Georgia" class="history-img">
+                    <div>
+                        <h4>Georgia</h4>
+                        <p>Founded in 1733 as a debtor's colony and a buffer against Spanish Florida, Georgia initially prohibited slavery. However, it later adopted a plantation economy fueled by enslaved labor.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Shared Struggles and Independence -->
+            <div class="history-section">
+                <h3>Shared Struggles and Independence</h3>
+                <div class="shared-struggles">
+                    <img src="images/Surrender-of-Lord-Cornwallis-canvas-John-Laurens-1820.jpg" alt="American Revolution" class="history-img">
+                    <p>Despite their diverse origins and economies, the colonies faced common challenges under British rule. Taxation without representation, restrictions on trade, and growing resentment towards imperial policies fueled a shared desire for independence. This culminated in the American Revolution (1775-1783), where the united colonies severed ties with Britain and established themselves as the first independent nation in the Americas.</p>
+                </div>
+            </div>
+
+            <!-- Legacy -->
+            <div class="history-section">
+                <h3>Legacy</h3>
+                <div class="legacy">
+                    <img src="images/original-13-states-03large.jpg" alt="Legacy of the 13 States" class="history-img">
+                    <p>The legacy of these 13 states is profound. They laid the foundation for American democracy, enshrined in the Constitution of the United States. Their stories of struggle, ingenuity, and a yearning for freedom continue to resonate with us today, reminding us of the power of a united people and the enduring values that shaped a nation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 The First 13 American States. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript для Toggle Button та Interactive Elements -->
+    <script>
+        // Toggle Button Functionality for Mobile Navigation
+        const toggleButton = document.querySelector('.toggle-button');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        toggleButton.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

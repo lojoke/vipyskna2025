@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Jersey - The Garden State</title>
+    <link rel="stylesheet" href="styles_new-jersey.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrQdP2v6/UYbVx3AnWDrjH2UY6j6VMnVq3E13ujc0nBt8N3p19KcfmGqOk4GJqI6gZr30HBwSxGjkL7ZsQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <h2 class="history-header">
+                <a href="main.html" class="main-header-link" aria-label="Перейти на головну сторінку">The First 13 American States</a>
+            </h2>
+            <p>Exploring the Foundations of the United States</p>
+        </div>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="container">
+            <span class="toggle-button" aria-label="Toggle Navigation Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </span>
+            <ul class="nav-menu">
+                <li><a href="../introduction.html">Introduction</a></li>
+                <li class="dropdown">
+                    <a href="#states" class="dropbtn">States</a>
+                    <div class="dropdown-content">
+                        <a href="delaware.html">Delaware</a>
+                        <a href="pennsylvania.html">Pennsylvania</a>
+                        <a href="new-jersey.html">New Jersey</a>
+                        <a href="georgia.html">Georgia</a>
+                        <a href="connecticut.html">Connecticut</a>
+                        <a href="massachusetts.html">Massachusetts</a>
+                        <a href="maryland.html">Maryland</a>
+                        <a href="south-carolina.html">South Carolina</a>
+                        <a href="new-hampshire.html">New Hampshire</a>
+                        <a href="virginia.html">Virginia</a>
+                        <a href="new-york.html">New York</a>
+                        <a href="north-carolina.html">North Carolina</a>
+                        <a href="rhode-island.html">Rhode Island</a>
+                    </div>
+                </li>
+                <li><a href="../history.html">History</a></li>
+                <li><a href="../conclusion.html">Conclusion</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <div class="container newjersey-section">
+            <h2>New Jersey</h2>
+            <img src="../images/new_jersey.png" alt="New Jersey History" class="state-image">
+            <!-- Видалено відео -->
+            <blockquote class="highlight">
+                "New Jersey is a state in the northeastern United States, bordered by New York, New Jersey, Delaware, Maryland, West Virginia, Ohio, and Lake Erie. It is known as the “Garden State” for its agricultural production and the “Crossroads of the Revolution” for its strategic role in the American Revolutionary War. It is also famous for its beaches, casinos, and musical legends."
+            </blockquote>
+            <p>
+                New Jersey is a state in the northeastern United States, bordered by New York, New Jersey, Delaware, Maryland, West Virginia, Ohio, and Lake Erie. It is known as the “Garden State” for its agricultural production and the “Crossroads of the Revolution” for its strategic role in the American Revolutionary War. It is also famous for its beaches, casinos, and musical legends.
+            </p>
+            <p>
+                Some of the facts and information about New Jersey are:
+            </p>
+            <ul>
+                <li>It is the 11th state to ratify the U.S. Constitution on December 18, 1787.</li>
+                <li>It is the fourth smallest state by area and the most densely populated state.</li>
+                <li>It has 21 counties and its capital is Trenton. Its largest city is Newark.</li>
+                <li>It has the highest percentage of millionaire households in the nation.</li>
+                <li>It is the only state where all of its counties are classified as metropolitan areas.</li>
+                <li>It is the birthplace of many famous people, such as Thomas Edison, Albert Einstein, Frank Sinatra, Bruce Springsteen, Jon Bon Jovi, Whitney Houston, and Meryl Streep.</li>
+                <li>It is the leading producer of cranberries, blueberries, and tomatoes in the country.</li>
+                <li>It has more than 50 resort cities and towns, such as Atlantic City, Cape May, and Asbury Park.</li>
+                <li>It has more than 1,800 miles of shoreline, including 130 miles of Atlantic coast.</li>
+            </ul>
+        </div>
+
+        <!-- Interactive Quiz Section -->
+        <section class="quiz-section">
+            <h3>New Jersey Knowledge Quiz</h3>
+            <form id="quiz-form" class="quiz-form">
+                <!-- Питання 1 -->
+                <div class="quiz-question">
+                    <p><strong>1. New Jersey is known as the "Garden State" because of its:</strong></p>
+                    <ul class="quiz-options">
+                        <li>
+                            <button type="button" onclick="selectAnswer('q1', 'a')"> Large number of public gardens and parks.</button>
+                        </li>
+                        <li>
+                            <button type="button" onclick="selectAnswer('q1', 'b')"> Significant agricultural production.</button>
+                        </li>
+                        <li>
+                            <button type="button" onclick="selectAnswer('q1', 'c')"> Reputation for environmental conservation.</button>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Питання 2 -->
+                <div class="quiz-question">
+                    <p><strong>2. Which of the following is NOT a reason New Jersey is famous?</strong></p>
+                    <ul class="quiz-options">
+                        <li>
+                            <button type="button" onclick="selectAnswer('q2', 'a')"> Its beaches and casinos.</button>
+                        </li>
+                        <li>
+                            <button type="button" onclick="selectAnswer('q2', 'b')"> Hosting the first official baseball game.</button>
+                        </li>
+                        <li>
+                            <button type="button" onclick="selectAnswer('q2', 'c')"> Being the largest state by area.</button>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Питання 3 -->
+                <div class="quiz-question">
+                    <p><strong>3. New Jersey has the highest percentage of millionaire households in the nation. This statement is:</strong></p>
+                    <ul class="quiz-options">
+                        <li>
+                            <button type="button" onclick="selectAnswer('q3', 'a')"> True</button>
+                        </li>
+                        <li>
+                            <button type="button" onclick="selectAnswer('q3', 'b')"> False</button>
+                        </li>
+                        <li>
+                            <button type="button" onclick="selectAnswer('q3', 'c')"> Not mentioned</button>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Питання 4 -->
+                <div class="quiz-question">
+                    <p><strong>4. Which famous person is NOT listed as being from New Jersey?</strong></p>
+                    <ul class="quiz-options">
+                        <li>
+                            <button type="button" onclick="selectAnswer('q4', 'a')"> Albert Einstein</button>
+                        </li>
+                        <li>
+                            <button type="button" onclick="selectAnswer('q4', 'b')"> Elvis Presley</button>
+                        </li>
+                        <li>
+                            <button type="button" onclick="selectAnswer('q4', 'c')"> Frank Sinatra</button>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Питання 5 -->
+                <div class="quiz-question">
+                    <p><strong>5. The capital of New Jersey is:</strong></p>
+                    <ul class="quiz-options">
+                        <li>
+                            <button type="button" onclick="selectAnswer('q5', 'a')"> Newark</button>
+                        </li>
+                        <li>
+                            <button type="button" onclick="selectAnswer('q5', 'b')"> Trenton</button>
+                        </li>
+                        <li>
+                            <button type="button" onclick="selectAnswer('q5', 'c')"> Atlantic City</button>
+                        </li>
+                    </ul>
+                </div>
+
+                <button type="button" id="submit-quiz" class="button"><i class="fas fa-paper-plane"></i> Submit Answers</button>
+            </form>
+            <div id="quiz-feedback" class="feedback"></div>
+        </section>
+    </main>
+
+    <!-- Футер -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 The First 13 American States. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="quiz.js"></script>
+</body>
+</html>

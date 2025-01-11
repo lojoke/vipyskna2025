@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Hampshire - The First 13 American States</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrQdP2v6/UYbVx3AnWDrjH2UY6j6VMnVq3E13ujc0nBt8N3p19KcfmGqOk4GJqI6gZr30HBwSxGjkL7ZsQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles_new-hampshire.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <h2 class="history-header">
+                <a href="../main.html" class="main-header-link" aria-label="Перейти на головну сторінку">The First 13 American States</a>
+            </h2>
+            <p>Explore the rich history of the original thirteen colonies...</p>
+        </div>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="container">
+            <span class="toggle-button" aria-label="Toggle Navigation Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </span>
+            <ul class="nav-menu">
+                <li><a href="../introduction.html">Introduction</a></li>
+                <li class="dropdown">
+                    <a href="#states" class="dropbtn">States <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="delaware.html">Delaware</a>
+                        <a href="pennsylvania.html">Pennsylvania</a>
+                        <a href="new-jersey.html">New Jersey</a>
+                        <a href="georgia.html">Georgia</a>
+                        <a href="connecticut.html">Connecticut</a>
+                        <a href="massachusetts.html">Massachusetts</a>
+                        <a href="maryland.html">Maryland</a>
+                        <a href="south-carolina.html">South Carolina</a>
+                        <a href="new-hampshire.html">New Hampshire</a>
+                        <a href="virginia.html">Virginia</a>
+                        <a href="new-york.html">New York</a>
+                        <a href="north-carolina.html">North Carolina</a>
+                        <a href="rhode-island.html">Rhode Island</a>
+                    </div>
+                </li>
+                <li><a href="../history.html">History</a></li>
+                <li><a href="../conclusion.html">Conclusion</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <img src="../images/new-hampsire_landscape.jpg" alt="New Hampshire Landscape" class="hero-image">
+        <div class="hero-content">
+            <h1>New Hampshire</h1>
+            <p>The Granite State, Mother of Rivers, and White Mountain State</p>
+        </div>
+    </section>
+
+    <!-- Main Content Section -->
+    <section class="content">
+        <div class="container">
+            <h2>Discovering New Hampshire</h2>
+            <p>
+                New Hampshire is a state in the northeastern United States, bordered by Maine, Vermont, Massachusetts, and Quebec, Canada. It is known as the <span class="highlight">“Granite State”</span> for its abundant granite formations and quarries, the <span class="highlight">“Mother of Rivers”</span> for its rivers that flow to the Atlantic Ocean, and the <span class="highlight">“White Mountain State”</span> for its mountain range that covers most of the state. It is also famous for its natural beauty, political influence, and cultural diversity.
+            </p>
+            <h3>Facts and Information about New Hampshire:</h3>
+            <ul>
+                <li>It is the ninth state to ratify the U.S. Constitution on June 21, 1788.</li>
+                <li>It is the fifth smallest state by area and the tenth least populous state.</li>
+                <li>It has 10 counties and its capital is Concord. Its largest city is Manchester.</li>
+                <li>It has the first-in-the-nation presidential primary, which gives it a significant role in choosing the candidates for the U.S. presidential election.</li>
+                <li>It is the only state that does not require its residents to pay income tax and sales tax.</li>
+                <li>It is the birthplace of many famous people, such as Daniel Webster, Franklin Pierce, Robert Frost, Alan Shepard, and Adam Sandler.</li>
+                <li>It is home to the highest peak in the northeastern U.S., Mount Washington, which has the world’s worst weather and the fastest wind speed ever recorded on Earth.</li>
+                <li>It is the leading producer of maple syrup in the U.S., producing about 90,000 gallons per year.</li>
+                <li>It has more than 1,300 lakes and ponds, including Lake Winnipesaukee, the largest lake in the state and the third largest in New England.</li>
+                <li>It has more than 250 state parks and forests, such as Franconia Notch State Park, Crawford Notch State Park, and White Mountain National Forest.</li>
+            </ul>
+            <figure class="image-with-caption">
+                <img src="../images/new-hampsire-history.jpg" alt="North Carolina History" class="state-image">
+                <figcaption class="image-caption">Circa 1623, The first settlement made at Odiorne's Point</figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <!-- Quiz Section -->
+    <section class="quiz-section">
+        <div class="container">
+            <h3>Exercise 9 (New Hampshire): Test Your Knowledge</h3>
+            <form class="quiz-form" id="quizForm">
+                <div class="quiz-question" id="q1">
+                    <h4>1. New Hampshire is known as the “Granite State” due to its:</h4>
+                    <ul class="quiz-options">
+                        <li><button type="button" onclick="selectAnswer('q1', 'a')"> Abundant granite formations</button></li>
+                        <li><button type="button" onclick="selectAnswer('q1', 'b')"> Rugged mountain landscapes</button></li>
+                        <li><button type="button" onclick="selectAnswer('q1', 'c')"> Granite-based economy</button></li>
+                    </ul>
+                </div>
+
+                <div class="quiz-question" id="q2">
+                    <h4>2. What is the capital of New Hampshire?</h4>
+                    <ul class="quiz-options">
+                        <li><button type="button" onclick="selectAnswer('q2', 'a')"> Concord</button></li>
+                        <li><button type="button" onclick="selectAnswer('q2', 'b')"> Manchester</button></li>
+                        <li><button type="button" onclick="selectAnswer('q2', 'c')"> Portsmouth</button></li>
+                    </ul>
+                </div>
+
+                <div class="quiz-question" id="q3">
+                    <h4>3. New Hampshire ratified the U.S. Constitution as the ___ state.</h4>
+                    <ul class="quiz-options">
+                        <li><button type="button" onclick="selectAnswer('q3', 'a')"> First</button></li>
+                        <li><button type="button" onclick="selectAnswer('q3', 'b')"> Fifth</button></li>
+                        <li><button type="button" onclick="selectAnswer('q3', 'c')"> Ninth</button></li>
+                        <li><button type="button" onclick="selectAnswer('q3', 'd')"> Twelfth</button></li>
+                    </ul>
+                </div>
+
+                <div class="quiz-question" id="q4">
+                    <h4>4. Which of these taxes does New Hampshire NOT require its residents to pay?</h4>
+                    <ul class="quiz-options">
+                        <li><button type="button" onclick="selectAnswer('q4', 'a')"> Income tax</button></li>
+                        <li><button type="button" onclick="selectAnswer('q4', 'b')"> Sales tax</button></li>
+                        <li><button type="button" onclick="selectAnswer('q4', 'c')"> Both a and b</button></li>
+                    </ul>
+                </div>
+
+                <div class="quiz-question" id="q5">
+                    <h4>5. Who among the following is NOT a famous person born in New Hampshire?</h4>
+                    <ul class="quiz-options">
+                        <li><button type="button" onclick="selectAnswer('q5', 'a')"> Daniel Webster</button></li>
+                        <li><button type="button" onclick="selectAnswer('q5', 'b')"> Mark Twain</button></li>
+                        <li><button type="button" onclick="selectAnswer('q5', 'c')"> Adam Sandler</button></li>
+                    </ul>
+                </div>
+
+                <div class="quiz-question" id="q6">
+                    <h4>6. Mount Washington is known for having:</h4>
+                    <ul class="quiz-options">
+                        <li><button type="button" onclick="selectAnswer('q6', 'a')"> The highest peak in the U.S.</button></li>
+                        <li><button type="button" onclick="selectAnswer('q6', 'b')"> The world’s worst weather</button></li>
+                        <li><button type="button" onclick="selectAnswer('q6', 'c')"> The largest ski resort</button></li>
+                    </ul>
+                </div>
+
+                <div class="quiz-question" id="q7">
+                    <h4>7. New Hampshire leads the U.S. in the production of:</h4>
+                    <ul class="quiz-options">
+                        <li><button type="button" onclick="selectAnswer('q7', 'a')"> Cheese</button></li>
+                        <li><button type="button" onclick="selectAnswer('q7', 'b')"> Apples</button></li>
+                        <li><button type="button" onclick="selectAnswer('q7', 'c')"> Maple syrup</button></li>
+                    </ul>
+                </div>
+
+                <div class="quiz-question" id="q8">
+                    <h4>8. The largest lake in New Hampshire is:</h4>
+                    <ul class="quiz-options">
+                        <li><button type="button" onclick="selectAnswer('q8', 'a')"> Lake Winnipesaukee</button></li>
+                        <li><button type="button" onclick="selectAnswer('q8', 'b')"> Lake Champlain</button></li>
+                        <li><button type="button" onclick="selectAnswer('q8', 'c')"> Lake Tahoe</button></li>
+                    </ul>
+                </div>
+
+                <div class="quiz-question" id="q9">
+                    <h4>9. New Hampshire’s first-in-the-nation presidential primary gives it significant influence in:</h4>
+                    <ul class="quiz-options">
+                        <li><button type="button" onclick="selectAnswer('q9', 'a')"> The U.S. presidential election</button></li>
+                        <li><button type="button" onclick="selectAnswer('q9', 'b')"> State elections</button></li>
+                        <li><button type="button" onclick="selectAnswer('q9', 'c')"> Local governance</button></li>
+                    </ul>
+                </div>
+
+                <div class="quiz-question" id="q10">
+                    <h4>10. How many counties does New Hampshire have?</h4>
+                    <ul class="quiz-options">
+                        <li><button type="button" onclick="selectAnswer('q10', 'a')"> 5</button></li>
+                        <li><button type="button" onclick="selectAnswer('q10', 'b')"> 10</button></li>
+                        <li><button type="button" onclick="selectAnswer('q10', 'c')"> 15</button></li>
+                    </ul>
+                </div>
+
+                <button type="button" class="button" id="submit-quiz">Submit answers</button>
+            </form>
+            <div id="quiz-feedback" class="feedback"></div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 The First 13 American States. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="quiz.js"></script>
+</body>
+</html>

@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction - The First 13 American States</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Правильний шлях до CSS -->
+    <!-- Google Fonts для консистентності -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome для іконок (опціонально) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrQdP2v6/UYbVx3AnWDrjH2UY6j6VMnVq3E13ujc0nBt8N3p19KcfmGqOk4GJqI6gZr30HBwSxGjkL7ZsQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* Додаткові стилі для сторінки Introduction */
+        .introduction-section {
+            background-color: #ffffff;
+            padding: 30px;
+            margin-top: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .introduction-section h2 {
+            text-align: center;
+            color: #1e3c72;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .introduction-section p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            color: #333333;
+            margin-bottom: 20px;
+        }
+
+        .introduction-section ul {
+            list-style-type: disc;
+            padding-left: 40px;
+            color: #333333;
+            margin-bottom: 20px;
+        }
+
+        .introduction-section img {
+            display: block;
+            width: 100%;
+            max-width: 800px;
+            margin: 20px auto;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .introduction-section img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        header .history-header a.main-header-link {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 2.5em;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        
+        header .history-header a.main-header-link:hover {
+            color: #d1e0e0;
+        }
+
+        /* Додаткові стилі для відео */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 */
+            padding-top: 25px;
+            height: 0;
+            margin: 20px 0;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Цитати */
+        blockquote.highlight {
+            background-color: #e0f7fa;
+            padding: 15px 20px;
+            border-left: 5px solid #1e3c72;
+            margin: 20px 0;
+            font-style: italic;
+            color: #333333;
+        }
+
+        /* Секція тесту */
+        .quiz-section {
+            background-color: #f9f5ff;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            margin-top: 40px;
+            animation: fadeInUp 1s ease-out;
+            text-align: center;
+        }
+
+        .quiz-section h3 {
+            color: #1e3c72;
+            font-size: 1.8em;
+            margin-bottom: 25px;
+        }
+
+        .quiz-form {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .quiz-question {
+            margin-bottom: 20px;
+        }
+
+        .quiz-options {
+            list-style-type: none;
+            padding-left: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .quiz-options li {
+            margin-bottom: 10px;
+            width: 100%;
+            max-width: 600px;
+        }
+
+        .quiz-options button {
+            width: 100%;
+            padding: 10px 20px;
+            background-color: #f0f8ff;
+            border: 2px solid #1e3c72;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .quiz-options button:hover {
+            background-color: #1e3c72;
+            color: #ffffff;
+        }
+
+        .quiz-options button.selected {
+            background-color: #1e3c72;
+            color: #ffffff;
+        }
+
+        .button {
+            display: block;
+            width: 200px;
+            margin: 20px auto;
+            padding: 10px;
+            background-color: #1e3c72;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #2a5298;
+        }
+
+        .image-with-caption {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .image-caption {
+            font-size: 0.9em;
+            color: #7f8c8d;
+            margin-top: 8px;
+        }
+
+        .feedback {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 5px;
+            display: none;
+            text-align: center;
+            font-size: 1.2em;
+        }
+
+        .feedback.correct {
+            background-color: #d4edda;
+            color: #155724;
+        }
+
+        .feedback.incorrect {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+
+        /* Анімація появи секції */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Додаткові стилі для елементів */
+        .highlight {
+            background-color: #e0f7fa;
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+
+        /* Адаптивність для мобільних пристроїв */
+        @media (max-width: 768px) {
+            .nav-menu {
+                flex-direction: column;
+                display: none;
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .toggle-button {
+                display: flex;
+            }
+
+            .quiz-options button {
+                font-size: 0.9em;
+                padding: 8px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <h2 class="history-header">
+                <a href="../main.html" class="main-header-link" aria-label="Перейти на головну сторінку">The First 13 American States</a>
+            </h2>
+            <p>Exploring the Foundations of the United States</p>
+        </div>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="container">
+            <span class="toggle-button" aria-label="Toggle Navigation Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </span>
+            <ul class="nav-menu">
+                <li><a href="introduction.html">Introduction</a></li>
+                <li class="dropdown">
+                    <a href="#states" class="dropbtn">States</a>
+                    <div class="dropdown-content">
+                        <a href="states/delaware.html">Delaware</a>
+                        <a href="states/pennsylvania.html">Pennsylvania</a>
+                        <a href="states/new-jersey.html">New Jersey</a>
+                        <a href="states/georgia.html">Georgia</a>
+                        <a href="states/connecticut.html">Connecticut</a>
+                        <a href="states/massachusetts.html">Massachusetts</a>
+                        <a href="states/maryland.html">Maryland</a>
+                        <a href="states/south-carolina.html">South Carolina</a>
+                        <a href="states/new-hampshire.html">New Hampshire</a>
+                        <a href="states/virginia.html">Virginia</a>
+                        <a href="states/new-york.html">New York</a>
+                        <a href="states/north-carolina.html">North Carolina</a>
+                        <a href="states/rhode-island.html">Rhode Island</a>
+                    </div>
+                </li>
+                <li><a href="history.html">History</a></li>
+                <li><a href="conclusion.html">Conclusion</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <div class="container introduction-section">
+            <h2>Introduction</h2>
+            <img src="images/US_history.jpg" alt="US History" class="state-image">
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/bh79MXVZsds?si=Rd_V5Ju1RalT-IgI" title="US History Overview" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <blockquote class="highlight">
+                "The tree of liberty must be refreshed from time to time with the blood of patriots and tyrants." - Thomas Jefferson
+            </blockquote>
+            <p>
+                The history of the United States' formation is a complex narrative that intertwines the journeys of 13 British colonies towards independence, self-governance, and the establishment of a nation built on principles of freedom and democracy.
+            </p>
+            <p>
+                In 1620, a ship named “Mayflower” (from the English word “mayflower”) left the port of Plymouth with 102 Puritans who had fled England due to religious persecution, known as the Pilgrim Fathers. During the voyage, they signed the Mayflower Compact, a self-governance agreement. In December 1620, the Pilgrim Fathers landed near Cape Cod (Massachusetts) and decided to stay there. This day (December 22) is celebrated annually in the United States as Pilgrim Fathers Day.
+            </p>
+            <p>
+                They founded Virginia, and later 12 more colonies. Eight colonies were royal (Virginia, North and South Carolina, Georgia, Massachusetts, New Hampshire, New York, and New Jersey). Three colonies (Maryland, Pennsylvania, and Delaware) belonged to private individuals, and two (Connecticut and Rhode Island) were self-governing. Many settlers were Protestants who were driven out of their homeland due to religious beliefs. In the northern colonies, the land belonged to small farmers. They cultivated the land themselves and hired workers when necessary. In the southern colonies (Virginia, Carolina, Georgia), the land was obtained by English aristocrats. They created plantations on them to grow cotton and tobacco. The workforce consisted of black people who were imported from Africa. The number of slaves reached 60% of the population.
+            </p>
+            <p>
+                Until 1774, the colonies were independent and separate from each other. But thanks to the efforts of the prominent public figure B. Franklin, a union was formed, which included the future first 13 states of the United States. The list consisted of 9 provinces:
+            </p>
+            <ul>
+                <li>New Hampshire</li>
+                <li>Massachusetts Bay</li>
+                <li>New Jersey</li>
+                <li>New York</li>
+                <li>Pennsylvania</li>
+                <li>Maryland</li>
+                <li>South Carolina</li>
+                <li>North Carolina</li>
+                <li>Georgia</li>
+            </ul>
+            <p>
+                In addition to the provinces, 4 colonies entered the Union:
+            </p>
+            <ul>
+                <li>Rhode Island and Providence Plantations</li>
+                <li>Connecticut</li>
+                <li>Delaware</li>
+                <li>Virginia</li>
+            </ul>
+            <p>
+                When George III ascended to the throne of England, he wanted to strengthen his power by plundering the colonies. A stamp duty law was introduced - a tax that had to be paid by everyone who printed agreements, documents, newspapers, even playing cards. In 1763, the king issued a decree banning settlement in western lands. The interests of fur traders were protected, but this decree outraged farmers who needed land. The English government banned the opening of factories, and industrial goods were imported into the colonies at inflated prices. For example, in 1750, it was allowed to smelt iron and iron in the colonies, but there was still a ban on their processing. Shipowners were prohibited from using non-English sailcloth. It was ridiculous: in 1732, the export of felt hats from the colonies was banned.
+            </p>
+            <p>
+                Although the stamp duty was repealed the following year, the conflict remained. A boycott of English goods began. In 1773, a group of Americans in Boston, dressed as Indians, threw boxes of tea into the sea. This “Boston Tea Party” marked the beginning of the struggle. During the War of Independence, all colonists divided into two camps: patriots (supporters of independence) and loyalists (supporters of the legitimate authority of the English king).
+            </p>
+            <p>
+                The English authorities closed the port of Boston for trade. In response, uprisings began in all 13 colonies. In September 1774, the First Continental Congress met in Philadelphia, attended by 56 representatives from 12 colonies. The “Declaration of Rights” was adopted, condemning England’s policy and defending the colonies’ right to life, liberty, and property. The colonies began to create armed units.
+            </p>
+            <p>
+                In April 1775, the first armed clashes between the English army and the colonists took place under Lexington and Concord. The War of Independence (1775-1783) began in North America.
+            </p>
+            <p>
+                The colonies declared themselves independent countries - states. Virginia was the first to do so. During the war, in 1776, the “Declaration of Independence of the United States” was signed by 13 states, which raised the fighting spirit of Americans. Volunteers from Europe began to arrive in America - the most famous of them were General Lafayette from France and Kosciuszko from Poland.
+            </p>
+            <p>
+                The story of the first 13 American states is a multifaceted tapestry woven with threads of exploration, revolution, and unwavering pursuit of self-governance. These states, once British colonies, birthed the United States of America, shaping its character and defining its destiny.
+            </p>
+            <figure class="image-with-caption">
+                <img src="images/american_revolution.jpg" alt="North Carolina History" class="state-image">
+                <figcaption class="image-caption">The Surrender of Lord Cornwallis (at Yorktown, Virginia, on October 19, 1781)</figcaption>
+            </figure>
+        </div>
+    </main>
+
+    <!-- Футер -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 The First 13 American States. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript для Toggle Button та Quiz Functionality -->
+    <script src="script.js"></script> <!-- Правильний шлях до JS -->
+    <script>
+        // JavaScript для Quiz у Introduction
+        document.addEventListener("DOMContentLoaded", function() {
+            const submitButton = document.getElementById("submit-quiz");
+            const feedback = document.getElementById("quiz-feedback");
+            const answers = {
+                q1: "b",
+                q2: "b",
+                q3: "c",
+                q4: "a",
+                q5: "c",
+                q6: "b",
+                q7: "b",
+                q8: "a",
+                q9: "b",
+                q10: "c"
+            };
+            const userAnswers = {};
+
+            // Функція для вибору відповіді
+            window.selectAnswer = function(question, answer) {
+                userAnswers[question] = answer;
+                // Підсвічування вибраної відповіді
+                const buttons = document.querySelectorAll(`button[onclick="selectAnswer('${question}', 'a')"],
+                                                        button[onclick="selectAnswer('${question}', 'b')"],
+                                                        button[onclick="selectAnswer('${question}', 'c')"]`);
+                buttons.forEach(btn => btn.classList.remove('selected'));
+                const selectedButton = document.querySelector(`button[onclick="selectAnswer('${question}', '${answer}')"]`);
+                if (selectedButton) {
+                    selectedButton.classList.add('selected');
+                }
+            }
+
+            submitButton.addEventListener("click", function(event) {
+                event.preventDefault(); // Запобігаємо перезавантаженню сторінки при натисканні на кнопку
+
+                let score = 0;
+                const total = 10; // Загальна кількість питань
+
+                // Перевірка кожного питання
+                for (let question in answers) {
+                    if (userAnswers[question] === answers[question]) {
+                        score++;
+                    }
+                }
+
+                // Генерація повідомлення
+                let message = "";
+                if (score === total) {
+                    message = `<i class="fas fa-check-circle"></i> Excellent! You answered all questions correctly.`;
+                    feedback.classList.add("correct");
+                    feedback.classList.remove("incorrect");
+                } else if (score >= total / 2) {
+                    message = `<i class="fas fa-info-circle"></i> Good job! You got ${score} out of ${total} correct.`;
+                    feedback.classList.add("correct");
+                    feedback.classList.remove("incorrect");
+                } else {
+                    message = `<i class="fas fa-times-circle"></i> You got ${score} out of ${total} correct. Keep studying!`;
+                    feedback.classList.add("incorrect");
+                    feedback.classList.remove("correct");
+                }
+
+                // Вивід повідомлення
+                feedback.innerHTML = message;
+                feedback.style.display = "block";
+            });
+        });
+    </script>
+</body>
+</html>

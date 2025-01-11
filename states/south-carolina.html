@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>South Carolina - The First 13 American States</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrQdP2v6/UYbVx3AnWDrjH2UY6j6VMnVq3E13ujc0nBt8N3p19KcfmGqOk4GJqI6gZr30HBwSxGjkL7ZsQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles_south-carolina.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <h2 class="history-header">
+                <a href="../main.html" class="main-header-link" aria-label="Перейти на головну сторінку">The First 13 American States</a>
+            </h2>
+            <p>Explore the rich history of the original thirteen colonies...</p>
+        </div>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="container">
+            <span class="toggle-button" aria-label="Toggle Navigation Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </span>
+            <ul class="nav-menu">
+                <li><a href="../introduction.html">Introduction</a></li>
+                <li class="dropdown">
+                    <a href="#states" class="dropbtn">States <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="delaware.html">Delaware</a>
+                        <a href="pennsylvania.html">Pennsylvania</a>
+                        <a href="new-jersey.html">New Jersey</a>
+                        <a href="georgia.html">Georgia</a>
+                        <a href="connecticut.html">Connecticut</a>
+                        <a href="massachusetts.html">Massachusetts</a>
+                        <a href="maryland.html">Maryland</a>
+                        <a href="south-carolina.html">South Carolina</a>
+                        <a href="new-hampshire.html">New Hampshire</a>
+                        <a href="virginia.html">Virginia</a>
+                        <a href="new-york.html">New York</a>
+                        <a href="north-carolina.html">North Carolina</a>
+                        <a href="rhode-island.html">Rhode Island</a>
+                    </div>
+                </li>
+                <li><a href="../history.html">History</a></li>
+                <li><a href="../conclusion.html">Conclusion</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <img src="../images/south-carolina-landscape.jpg" alt="South Carolina Landscape" class="hero-image">
+        <div class="hero-content">
+            <h1>South Carolina</h1>
+            <p>The Palmetto State, History, Culture, and Natural Beauty</p>
+        </div>
+    </section>
+
+    <!-- Main Content Section -->
+    <section class="content">
+        <div class="container">
+            <h2>Discovering South Carolina</h2>
+            <p>
+                South Carolina is a state in the southeastern United States, bordered by North Carolina, Georgia, and the Atlantic Ocean. It is known as the <span class="highlight">“Palmetto State”</span> for its official state tree, the sabal palmetto, which symbolizes its resistance to the British during the American Revolution. It is also famous for its history, culture, and natural beauty.
+            </p>
+            <h3>Facts and Information about South Carolina:</h3>
+            <ul>
+                <li>It is the eighth state to ratify the U.S. Constitution on May 23, 1788.</li>
+                <li>It is the 40th largest state by area and the 23rd most populous state.</li>
+                <li>It has 46 counties and its capital is Columbia. Its largest city is Charleston.</li>
+                <li>It has the lowest percentage of residents who have obtained a bachelor’s degree or higher in the nation.</li>
+                <li>It is the only state where tea is grown commercially.</li>
+                <li>It is the birthplace of many famous people, such as John C. Calhoun, Andrew Jackson, Strom Thurmond, James Brown, Darius Rucker, and Stephen Colbert.</li>
+                <li>It is home to the first golf course in America, the first public museum in America, and the first opera house in America.</li>
+                <li>It is the leading producer of peaches, tobacco, and turkeys in the country.</li>
+                <li>It has more than 200 miles of coastline, including the Grand Strand, a 60-mile stretch of beaches and resorts.</li>
+                <li>It has more than 80 state parks and forests, such as Congaree National Park, Hunting Island State Park, and Table Rock State Park.</li>
+            </ul>
+            <figure class="image-with-caption">
+                <img src="../images/south-carolina-history.jpg" alt="North Carolina History" class="state-image">
+                <figcaption class="image-caption">Fort Sumter on April 15, 1861, following the evacuation of Union forces.</figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <!-- Quiz Section -->
+    <section class="quiz-section">
+        <div class="container">
+            <h3>Exercise 8 (South Carolina): Test Your Knowledge</h3>
+            <form class="quiz-form" id="quizForm">
+                <div class="quiz-question" id="q1">
+                    <h4>1. South Carolina is known as the "Palmetto State" because of its:</h4>
+                    <ul class="quiz-options">
+                        <li><button type="button" onclick="selectAnswer('q1', 'a')"> Famous Palmetto Bug</button></li>
+                        <li><button type="button" onclick="selectAnswer('q1', 'b')"> Abundance of palm trees on its beaches</button></li>
+                        <li><button type="button" onclick="selectAnswer('q1', 'c')"> Official state tree, the sabal palmetto</button></li>
+                        <li><button type="button" onclick="selectAnswer('q1', 'd')"> None of the above</button></li>
+                    </ul>
+                </div>
+
+                <div class="quiz-question" id="q2">
+                    <h4>2. What is the capital of South Carolina?</h4>
+                    <ul class="quiz-options">
+                        <li><button type="button" onclick="selectAnswer('q2', 'a')"> Charleston</button></li>
+                        <li><button type="button" onclick="selectAnswer('q2', 'b')"> Greenville</button></li>
+                        <li><button type="button" onclick="selectAnswer('q2', 'c')"> Columbia</button></li>
+                        <li><button type="button" onclick="selectAnswer('q2', 'd')"> Spartanburg</button></li>
+                    </ul>
+                </div>
+
+                <div class="quiz-question" id="q3">
+                    <h4>3. South Carolina ratified the U.S. Constitution as the ___ state.</h4>
+                    <ul class="quiz-options">
+                        <li><button type="button" onclick="selectAnswer('q3', 'a')"> Fourth</button></li>
+                        <li><button type="button" onclick="selectAnswer('q3', 'b')"> Eighth</button></li>
+                        <li><button type="button" onclick="selectAnswer('q3', 'c')"> Twelfth</button></li>
+                        <li><button type="button" onclick="selectAnswer('q3', 'd')"> Twenty-third</button></li>
+                    </ul>
+                </div>
+
+                <div class="quiz-question" id="q4">
+                    <h4>4. Which of the following is NOT grown or produced commercially in South Carolina?</h4>
+                    <ul class="quiz-options">
+                        <li><button type="button" onclick="selectAnswer('q4', 'a')"> Tea</button></li>
+                        <li><button type="button" onclick="selectAnswer('q4', 'b')"> Peaches</button></li>
+                        <li><button type="button" onclick="selectAnswer('q4', 'c')"> Coffee</button></li>
+                        <li><button type="button" onclick="selectAnswer('q4', 'd')"> Tobacco</button></li>
+                    </ul>
+                </div>
+
+                <div class="quiz-question" id="q5">
+                    <h4>5. What is unique about South Carolina in terms of education?</h4>
+                    <ul class="quiz-options">
+                        <li><button type="button" onclick="selectAnswer('q5', 'a')">It has the highest number of colleges per capita</button></li>
+                        <li><button type="button" onclick="selectAnswer('q5', 'b')">It has the highest graduation rate in the country</button></li>
+                        <li><button type="button" onclick="selectAnswer('q5', 'c')">It has the lowest percentage of residents with a bachelor’s degree or higher</button></li>
+                        <li><button type="button" onclick="selectAnswer('q5', 'd')">All of its public schools are ranked top in the nation</button></li>
+                    </ul>
+                </div>
+
+                <button type="button" class="button" id="submit-quiz">Submit answers</button>
+            </form>
+            <div id="quiz-feedback" class="feedback"></div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 The First 13 American States. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="quiz.js"></script>
+</body>
+</html>
