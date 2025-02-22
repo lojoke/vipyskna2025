@@ -1,13 +1,37 @@
 /* styles.css */
 
-/* General Styles */
+/* CSS-перемінні для легкого управління кольорами */
+:root {
+    --bg-color-light: #ffffff;
+    --text-color-light: #333333;
+    --nav-bg-light: #333333;
+    --nav-text-light: #ffffff;
+    --nav-hover-bg-light: #575757;
+    --nav-hover-text-light: #ffffff;
+    --btn-bg-light: #1e3c72;
+    --btn-text-light: #ffffff;
+    --btn-hover-bg-light: #ff9800;
+    
+    --bg-color-dark: #121212;
+    --text-color-dark: #ffffff;
+    --nav-bg-dark: #1e1e1e;
+    --nav-text-dark: #ffffff;
+    --nav-hover-bg-dark: #333333;
+    --nav-hover-text-dark: #ff9800;
+    --btn-bg-dark: #ffffff;
+    --btn-text-dark: #1e3c72;
+    --btn-hover-bg-dark: #f0f0f0;
+}
+
+/* Загальні стилі */
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333333;
+    background-color: var(--bg-color-light);
+    color: var(--text-color-light);
     line-height: 1.6;
+    transition: background-color 0.6s ease, color 0.6s ease;
 }
 
 /* Container */
@@ -18,9 +42,19 @@ body {
     padding: 20px 0;
 }
 
+.container h1 {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.container p {
+    text-align: center;
+    font-size: 1.2em;
+}
+
 /* Header */
 header {
-    background-color: #1e3c72; /* Blue Shade */
+    background-color: #1e3c72;
     color: white;
     padding: 40px 0;
     text-align: center;
@@ -38,10 +72,11 @@ header .site-subheader {
 
 /* Navigation Menu */
 nav {
-    background-color: #333333;
+    background-color: var(--nav-bg-light);
     position: sticky;
     top: 0;
     z-index: 1000;
+    transition: background-color 0.6s ease;
 }
 
 .nav-menu {
@@ -59,21 +94,21 @@ nav {
 .nav-menu li a {
     display: block;
     padding: 15px 20px;
-    color: #ffffff;
+    color: var(--nav-text-light);
     text-decoration: none;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: background-color 0.6s ease, color 0.6s ease;
 }
 
 .nav-menu li a:hover {
-    background-color: #575757;
-    color: #ffffff;
+    background-color: var(--nav-hover-bg-light);
+    color: var(--nav-hover-text-light);
 }
 
 /* Dropdown Menu */
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #333333;
+    background-color: var(--nav-bg-light);
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     top: 50px;
@@ -82,7 +117,7 @@ nav {
 }
 
 .dropdown-content a {
-    color: #ffffff;
+    color: var(--nav-text-light);
     padding: 12px 16px;
     text-decoration: none;
     display: block;
@@ -90,7 +125,7 @@ nav {
 }
 
 .dropdown-content a:hover {
-    background-color: #575757;
+    background-color: var(--nav-hover-bg-light);
 }
 
 .dropdown:hover .dropdown-content {
@@ -111,6 +146,151 @@ nav {
     background-color: #ffffff;
     margin: 4px 0;
     transition: 0.4s;
+}
+
+/* Кнопка перемикання теми */
+.theme-toggle {
+    display: flex;
+    align-items: center;
+}
+
+#theme-toggle-button {
+    background: none;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 1.5em;
+    transition: transform 0.4s ease, color 0.4s ease;
+}
+
+body.dark-mode #theme-toggle-button {
+    color: #ffffff;
+}
+
+#theme-toggle-button:hover {
+    transform: rotate(20deg);
+    color: #ff9800;
+}
+
+#theme-toggle-button i {
+    pointer-events: none;
+}
+
+/* Темна тема */
+body.dark-mode {
+    background-color: var(--bg-color-dark);
+    color: var(--text-color-dark);
+    transition: background-color 0.6s ease, color 0.6s ease;
+}
+
+body.dark-mode nav {
+    background-color: var(--nav-bg-dark);
+}
+
+body.dark-mode .nav-menu li a {
+    color: var(--nav-text-dark);
+}
+
+body.dark-mode .nav-menu li a:hover {
+    background-color: var(--nav-hover-bg-dark);
+    color: var(--nav-hover-text-dark);
+}
+
+/* Анімація хвилі */
+@keyframes waveAnimation {
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(15);
+        opacity: 0;
+    }
+}
+
+.wave-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.8) 0%, rgba(0, 0, 0, 0.8) 100%);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 10000;
+}
+
+.wave-overlay.active {
+    animation: waveAnimation 0.6s forwards;
+}
+
+body.dark-mode .wave-overlay {
+    background: radial-gradient(circle at center, rgba(0, 0, 0, 0.8) 0%, rgba(255, 255, 255, 0.8) 100%);
+}
+
+/* Темна тема для секції Features */
+body.dark-mode .features {
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+
+body.dark-mode .feature-item {
+    background-color: #2c2c2c;
+    border: 1px solid #444444;
+}
+
+body.dark-mode .feature-item p {
+    color: #dddddd;
+}
+
+/* Темна тема для кнопок */
+body.dark-mode .btn-primary {
+    background-color: var(--btn-bg-dark);
+    color: var(--btn-text-dark);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode .btn-primary:hover {
+    background-color: var(--btn-hover-bg-dark);
+}
+
+/* Стилі для кнопки переходу */
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 24px;
+    background-color: var(--btn-bg-light);
+    color: var(--btn-text-light);
+    text-decoration: none;
+    font-size: 1.2em;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--btn-hover-bg-light);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.btn-primary i {
+    margin-right: 8px;
+    transition: transform 0.3s ease;
+}
+
+.btn-primary:hover i {
+    transform: rotate(20deg);
+}
+
+/* Адаптивні стилі для кнопки */
+@media (max-width: 768px) {
+    .btn-primary {
+        font-size: 1em;
+        padding: 10px 20px;
+    }
 }
 
 /* Додаткові стилі для титульної сторінки */
@@ -158,42 +338,9 @@ nav {
     color: #555555;
 }
 
-/* Оновлення стилів для героїчного розділу */
-.hero-main-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    text-align: center;
-    color: white;
-}
-
-.hero-main-content h2, .hero-main-content h3, .hero-main-content p {
-    margin: 10px 0;
-}
-
-/* Приховати кнопку "Explore Now", оскільки ми її замінюємо титульною сторінкою */
-.hero-main-content .btn-primary {
-    display: none;
-}
-
-/* Адаптивність для нових елементів */
-@media (max-width: 768px) {
-    .title-section .performer, .title-section .supervisors {
-        width: 100%;
-        text-align: center;
-    }
-
-    .hero-main-content {
-        padding: 20px;
-    }
-}
-
-
-/* Hero Section */
+/* Героїчна секція */
 .hero-main {
-    background-image: url('images/main-hero.jpg'); /* Replace with appropriate image */
+    background-image: url('images/main-hero.jpg'); /* Замініть на відповідне зображення */
     background-size: cover;
     background-position: center;
     color: white;
@@ -209,7 +356,7 @@ nav {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(30, 60, 114, 0.6); /* Semi-transparent layer for text readability */
+    background-color: rgba(30, 60, 114, 0.6); /* Напівпрозорий шар для читабельності тексту */
     z-index: 1;
 }
 
@@ -229,19 +376,8 @@ nav {
     text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
 }
 
-.btn-primary {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 30px;
-    background-color: #ff9800;
-    color: #ffffff;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.btn-primary:hover {
-    background-color: #e68900;
+.hero-main .btn-primary {
+    display: none; /* Приховуємо кнопку, якщо вона замінена іншою */
 }
 
 /* Features Section */
@@ -312,7 +448,7 @@ nav {
     margin: 0 auto;
     overflow: hidden;
     border-radius: 10px;
-    height: 400px; /* Fixed height to ensure visibility */
+    height: 400px; /* Фіксована висота для забезпечення видимості */
 }
 
 .carousel-item {
@@ -398,7 +534,6 @@ nav {
     margin-bottom: 40px;
 }
 
-
 .states-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -472,270 +607,63 @@ nav {
     background-color: #f0f0f0;
 }
 
-        /* Інтерактивна Карта */
-        .interactive-map {
-            padding: 50px 0;
-            background-color: #ffffff;
-            text-align: center;
-        }
+/* Інтерактивна Карта */
+.interactive-map {
+    padding: 50px 0;
+    background-color: #ffffff;
+    text-align: center;
+}
 
-        .interactive-map h2 {
-            color: #1e3c72;
-            font-size: 3em;
-            margin-bottom: 40px;
-        }
+.interactive-map h2 {
+    color: #1e3c72;
+    font-size: 3em;
+    margin-bottom: 40px;
+}
 
-        .map-container {
-            position: relative;
-            display: inline-block;
-            width: 80%;
-            max-width: 800px;
-        }
+.map-container {
+    position: relative;
+    display: inline-block;
+    width: 80%;
+    max-width: 800px;
+}
 
-        .map-container svg {
-            width: 100%;
-            height: auto;
-        }
+.map-container svg {
+    width: 100%;
+    height: auto;
+}
 
-        .state {
-            fill: #1e3c72;
-            cursor: pointer;
-            transition: fill 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-        }
+.state {
+    fill: #1e3c72;
+    cursor: pointer;
+    transition: fill 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-        .state:hover {
-            fill: #ff9800;
-            transform: scale(1.05);
-            box-shadow: 0 0 10px rgba(0,0,0,0.3);
-        }
+.state:hover {
+    fill: #ff9800;
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
 
-                /* Секція інтерактивної карти */
-                .interactive-map {
-            position: relative;
-            margin: 40px 0;
-        }
+/* Tooltip */
+.tooltip {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #ffffff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    font-size: 1em;
+    max-width: 200px;
+    z-index: 10;
+    transform: translateY(-10px);
+}
 
-        .interactive-map svg {
-            width: 100%;
-            height: auto;
-        }
-
-        .tooltip {
-            position: absolute;
-            background-color: rgba(0, 0, 0, 0.8);
-            color: #fff;
-            padding: 8px;
-            border-radius: 4px;
-            pointer-events: none;
-            opacity: 0;
-            transition: opacity 0.3s;
-            z-index: 1000;
-        }
-
-        .tooltip.visible {
-            opacity: 1;
-        }
-
-        /* Секція заклику до дії */
-        .cta {
-            background: #007BFF;
-            color: #fff;
-            padding: 40px 0;
-            text-align: center;
-        }
-
-        .cta h2 {
-            font-size: 2rem;
-            margin-bottom: 10px;
-        }
-
-        .cta p {
-            font-size: 1.2rem;
-            margin-bottom: 20px;
-        }
-
-        .cta .btn-primary {
-            background: #fff;
-            color: #007BFF;
-            padding: 12px 24px;
-            text-decoration: none;
-            border-radius: 4px;
-            font-size: 1rem;
-            transition: background 0.3s, color 0.3s;
-        }
-
-        .cta .btn-primary:hover {
-            background: #e0e0e0;
-        }
-
-        /* Стилі футера */
-        footer {
-            background: #333;
-            color: #fff;
-            padding: 20px 0;
-        }
-
-        footer .container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        footer p {
-            margin-bottom: 10px;
-        }
-
-        /* Адаптивні стилі */
-        @media (max-width: 768px) {
-            nav .container {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            .toggle-button {
-                display: flex;
-            }
-
-            .nav-menu {
-                display: none;
-                flex-direction: column;
-                width: 100%;
-            }
-
-            .nav-menu.active {
-                display: flex;
-            }
-
-            nav ul {
-                flex-direction: column;
-                width: 100%;
-            }
-
-            nav ul li {
-                margin: 10px 0;
-            }
-        }
-
-        /* Стилі для SVG штатів */
-        .state-path {
-            stroke: #333;
-            stroke-width: 1;
-            fill: #f9f9f9;
-            cursor: pointer;
-            transition: fill 0.3s, stroke 0.3s;
-        }
-
-        .state-path:hover, .state-path:focus {
-            fill: #e0e0e0;
-            stroke: #007BFF;
-            outline: none;
-        }
-
-        /* Tooltip */
-        .tooltip {
-            position: absolute;
-            background-color: rgba(0, 0, 0, 0.8);
-            color: #ffffff;
-            padding: 10px 15px;
-            border-radius: 5px;
-            pointer-events: none;
-            opacity: 0;
-            transition: opacity 0.3s ease, transform 0.3s ease;
-            font-size: 1em;
-            max-width: 200px;
-            z-index: 10;
-            transform: translateY(-10px);
-        }
-
-        .tooltip.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-    /* Стилі футера */
-    footer {
-        background: #333;
-        color: #fff;
-        padding: 20px 0;
-    }
-
-    footer .container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    footer p {
-        margin-bottom: 10px;
-    }
-
-
-    /* Адаптивні стилі */
-    @media (max-width: 768px) {
-        nav .container {
-            flex-direction: column;
-            align-items: flex-start;
-        }
-
-        .toggle-button {
-            display: flex;
-        }
-
-        .nav-menu {
-            display: none;
-            flex-direction: column;
-            width: 100%;
-        }
-
-        .nav-menu.active {
-            display: flex;
-        }
-
-        nav ul {
-            flex-direction: column;
-            width: 100%;
-        }
-
-        nav ul li {
-            margin: 10px 0;
-        }
-    }
-
-    /* Стилі для SVG штатів */
-    .state-path {
-        stroke: #333;
-        stroke-width: 1;
-        fill: #f9f9f9;
-        cursor: pointer;
-        transition: fill 0.3s, stroke 0.3s;
-    }
-
-    .state-path:hover, .state-path:focus {
-        fill: #e0e0e0;
-        stroke: #007BFF;
-        outline: none;
-    }
-
-    /* Tooltip */
-    .tooltip {
-        position: absolute;
-        background-color: rgba(0, 0, 0, 0.8);
-        color: #ffffff;
-        padding: 10px 15px;
-        border-radius: 5px;
-        pointer-events: none;
-        opacity: 0;
-        transition: opacity 0.3s ease, transform 0.3s ease;
-        font-size: 1em;
-        max-width: 200px;
-        z-index: 10;
-        transform: translateY(-10px);
-    }
-
-    .tooltip.visible {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.tooltip.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
 
 /* Footer */
 footer {
@@ -748,20 +676,35 @@ footer {
 
 /* Responsive Styles */
 @media (max-width: 768px) {
-    .nav-menu {
+    nav .container {
         flex-direction: column;
-        display: none;
-    }
-
-    .nav-menu.active {
-        display: flex;
+        align-items: flex-start;
     }
 
     .toggle-button {
         display: flex;
     }
 
-    /* Hero Section */
+    .nav-menu {
+        flex-direction: column;
+        display: none;
+        width: 100%;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    /* Героїчна секція */
     .hero-main h1 {
         font-size: 2.5em;
     }
@@ -793,5 +736,19 @@ footer {
     .state-card h3 {
         font-size: 1.5em;
     }
-    
+}
+
+/* Стилі для SVG штатів */
+.state-path {
+    stroke: #333;
+    stroke-width: 1;
+    fill: #f9f9f9;
+    cursor: pointer;
+    transition: fill 0.3s, stroke 0.3s;
+}
+
+.state-path:hover, .state-path:focus {
+    fill: #e0e0e0;
+    stroke: #007BFF;
+    outline: none;
 }

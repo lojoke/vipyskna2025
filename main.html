@@ -7,7 +7,7 @@
     <!-- Google Fonts for modern typography -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrQdP2v6/UYbVx3AnWDrjH2UY6j6VMnVq3E13ujc0nBt8N3p19KcfmGqOk4GJqI6gZr30HBwSxGjkL7ZsQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMI3fPQD3h50LfsR6Ng91T6xl3ePUsGGXVdZCDV" crossorigin="anonymous">
     <!-- Link to external CSS -->
     <link rel="stylesheet" href="styles.css">
     <!-- Link to external JavaScript -->
@@ -53,9 +53,21 @@
                 </li>
                 <li><a href="history.html">History</a></li>
                 <li><a href="conclusion.html">Conclusion</a></li>
+                <div class="theme-toggle">
+                    <button id="theme-toggle-button" aria-label="Перемикання теми">
+                        🌙
+                    </button>
+                </div>
+                <div class="toggle-button">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
             </ul>
         </div>
     </nav>
+
+    <div class="wave-overlay" id="wave-overlay"></div>
 
     <!-- Hero Section -->
     <section class="hero-main">
@@ -116,9 +128,7 @@
                         <p>Cradle of American democracy with the Massachusetts Bay Colony.</p>
                     </div>
                 </div>
-                <!-- Add more carousel items as needed -->
             </div>
-            <!-- Carousel Controls -->
             <a class="prev" aria-label="Previous Slide">&#10094;</a>
             <a class="next" aria-label="Next Slide">&#10095;</a>
         </div>
@@ -707,7 +717,6 @@
 
             const tooltip = document.getElementById('tooltip');
 
-            // Додати події до кожного штату
             for (const stateId in states) {
                 const stateElement = document.getElementById(stateId);
                 if (stateElement) {

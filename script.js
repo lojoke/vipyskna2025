@@ -1,15 +1,45 @@
-// script.js
-
 document.addEventListener('DOMContentLoaded', () => {
-    // Toggle Button Functionality for Mobile Navigation
+    // Toggle Button for Mobile Navigation
     const toggleButton = document.querySelector('.toggle-button');
     const navMenu = document.querySelector('.nav-menu');
+    
+    toggleButton.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+    });
 
-    if (toggleButton && navMenu) {
-        toggleButton.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-        });
+// Dark Mode Functionality
+const themeToggleButton = document.getElementById('theme-toggle-button');
+const waveOverlay = document.getElementById('wave-overlay');
+
+if (themeToggleButton && waveOverlay) {
+    function applyTheme(theme) {
+        if (theme === 'dark') {
+            document.body.classList.add('dark-mode');
+            themeToggleButton.innerHTML = '☀️';
+        } else {
+            document.body.classList.remove('dark-mode');
+            themeToggleButton.innerHTML = '🌙';
+        }
     }
+
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    applyTheme(savedTheme);
+
+    themeToggleButton.addEventListener('click', () => {
+        const currentTheme = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+
+        waveOverlay.classList.add('active');
+
+        setTimeout(() => {
+            applyTheme(newTheme);
+            localStorage.setItem('theme', newTheme);
+            waveOverlay.classList.remove('active');
+        }, 600);
+    });
+} else {
+    console.warn('Елементи для перемикання теми не знайдені.');
+}
 
     // Carousel Functionality
     let slideIndex = 0;
@@ -18,7 +48,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const nextBtn = document.querySelector('.next');
     const totalSlides = slides.length;
 
-    // Function to show a specific slide
     function showSlide(index) {
         slides.forEach((slide, i) => {
             if (i === index) {
@@ -29,10 +58,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Show the initial slide
     showSlide(slideIndex);
 
-    // Event listeners for carousel controls
     if (nextBtn && prev) {
         nextBtn.addEventListener('click', () => {
             slideIndex = (slideIndex + 1) % totalSlides;
@@ -45,13 +72,11 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Auto-slide functionality with smooth transitions
     let autoSlideInterval = setInterval(() => {
         slideIndex = (slideIndex + 1) % totalSlides;
         showSlide(slideIndex);
-    }, 5000); // Change slide every 5 seconds
+    }, 5000);
 
-    // Pause auto-slide on hover and resume on mouse leave
     const carousel = document.querySelector('.carousel');
 
     if (carousel) {
@@ -67,8 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Інтерактивна Карта
-    document.addEventListener('DOMContentLoaded', () => {
+    // Interactive Map Functionality
     const states = {
         'delaware': {
             name: 'Delaware',
@@ -125,79 +149,60 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const tooltip = document.getElementById('tooltip');
-
-    // Делегування подій для покращення продуктивності
     const svgMap = document.getElementById('us-map');
 
-    svgMap.addEventListener('mouseover', (e) => {
-        const stateId = e.target.id;
-        if (states[stateId]) {
-            const state = states[stateId];
-            tooltip.innerHTML = `<strong>${state.name}</strong><br>${state.info}`;
-            tooltip.classList.add('visible');
-        }
-    });
-
-    svgMap.addEventListener('mousemove', (e) => {
-        const tooltipWidth = tooltip.offsetWidth;
-        const tooltipHeight = tooltip.offsetHeight;
-        let left = e.pageX + 15;
-        let top = e.pageY + 15;
-
-        // Коригування позиції, щоб підказка не виходила за межі екрану
-        if (left + tooltipWidth > window.innerWidth) {
-            left = e.pageX - tooltipWidth - 15;
-        }
-
-        if (top + tooltipHeight > window.innerHeight) {
-            top = e.pageY - tooltipHeight - 15;
-        }
-
-        tooltip.style.left = `${left}px`;
-        tooltip.style.top = `${top}px`;
-    });
-
-    svgMap.addEventListener('mouseout', (e) => {
-        const stateId = e.target.id;
-        if (states[stateId]) {
-            tooltip.classList.remove('visible');
-        }
-    });
-
-    // Додаткові події для доступності (фокусування клавіатурою)
-    const stateElements = svgMap.querySelectorAll('.state-path');
-    stateElements.forEach(stateElement => {
-        stateElement.setAttribute('tabindex', '0'); // Робимо фокусованим
-        stateElement.setAttribute('aria-label', states[stateElement.id].name);
-
-        stateElement.addEventListener('focus', (e) => {
-            const state = states[stateElement.id];
-            tooltip.innerHTML = `<strong>${state.name}</strong><br>${state.info}`;
-            tooltip.classList.add('visible');
-        });
-
-        stateElement.addEventListener('blur', (e) => {
-            tooltip.classList.remove('visible');
-        });
-    });
-});
-
-    // Dark Mode Toggle
-    const darkModeToggle = document.getElementById('dark-mode-toggle');
-
-    if (darkModeToggle) {
-        darkModeToggle.addEventListener('click', () => {
-            document.body.classList.toggle('dark-mode');
-
-            // Change icon based on mode
-            const icon = darkModeToggle.querySelector('i');
-            if (document.body.classList.contains('dark-mode')) {
-                icon.classList.remove('fa-moon');
-                icon.classList.add('fa-sun');
-            } else {
-                icon.classList.remove('fa-sun');
-                icon.classList.add('fa-moon');
+    if (tooltip && svgMap) {
+        svgMap.addEventListener('mouseover', (e) => {
+            const stateId = e.target.id;
+            if (states[stateId]) {
+                const state = states[stateId];
+                tooltip.innerHTML = `<strong>${state.name}</strong><br>${state.info}`;
+                tooltip.classList.add('visible');
             }
         });
+
+        svgMap.addEventListener('mousemove', (e) => {
+            const tooltipWidth = tooltip.offsetWidth;
+            const tooltipHeight = tooltip.offsetHeight;
+            let left = e.pageX + 15;
+            let top = e.pageY + 15;
+
+            if (left + tooltipWidth > window.innerWidth) {
+                left = e.pageX - tooltipWidth - 15;
+            }
+
+            if (top + tooltipHeight > window.innerHeight) {
+                top = e.pageY - tooltipHeight - 15;
+            }
+
+            tooltip.style.left = `${left}px`;
+            tooltip.style.top = `${top}px`;
+        });
+
+        svgMap.addEventListener('mouseout', (e) => {
+            const stateId = e.target.id;
+            if (states[stateId]) {
+                tooltip.classList.remove('visible');
+            }
+        });
+
+        // Додаткові події для доступності (фокусування клавіатурою)
+        const stateElements = svgMap.querySelectorAll('.state-path');
+        stateElements.forEach(stateElement => {
+            stateElement.setAttribute('tabindex', '0');
+            stateElement.setAttribute('aria-label', states[stateElement.id].name);
+
+            stateElement.addEventListener('focus', (e) => {
+                const state = states[stateElement.id];
+                tooltip.innerHTML = `<strong>${state.name}</strong><br>${state.info}`;
+                tooltip.classList.add('visible');
+            });
+
+            stateElement.addEventListener('blur', (e) => {
+                tooltip.classList.remove('visible');
+            });
+        });
+    } else {
+        console.warn('Елементи tooltip або us-map не знайдені.');
     }
 });

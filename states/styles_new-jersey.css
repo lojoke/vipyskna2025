@@ -1,5 +1,3 @@
-/* styles_newjersey.css */
-
 /* Загальні стилі */
 body {
     font-family: 'Roboto', sans-serif;
@@ -17,7 +15,7 @@ body {
 
 /* Шапка */
 header {
-    background-color: #1e3c72; /* Синій відтінок */
+    background-color: #1e3c72;
     color: white;
     padding: 20px 0;
     text-align: center;
@@ -65,7 +63,7 @@ nav {
     color: #ffffff;
     text-decoration: none;
     transition: background-color 0.3s ease, color 0.3s ease;
-    background-color: #333333; /* Забезпечує непрозорість */
+    background-color: #333333;
 }
 
 .nav-menu li a:hover {

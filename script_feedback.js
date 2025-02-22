@@ -101,11 +101,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Функція для відображення повідомлень
     function displayMessage(message, type) {
-        // Створюємо елемент для повідомлення
         const feedback = document.createElement('div');
         feedback.classList.add('feedback', type);
         feedback.innerHTML = message;
-        // Вставляємо повідомлення перед списком відгуків
         previousFeedback.prepend(feedback);
         feedback.style.display = "block";
         // Автоматичне видалення повідомлення через 5 секунд

@@ -4,11 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Feedback - The First 13 American States</title>
-    <!-- Google Fonts для консистентності -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <!-- Font Awesome для іконок -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrQdP2v6/UYbVx3AnWDrjH2UY6j6VMnVq3E13ujc0nBt8N3p19KcfmGqOk4GJqI6gZr30HBwSxGjkL7ZsQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- Посилання на окремий CSS файл -->
     <link rel="stylesheet" href="styles_feedback.css">
 </head>
 <body>
@@ -35,24 +32,23 @@
                 <li class="dropdown">
                     <a href="#states" class="dropbtn">States <i class="fas fa-chevron-down"></i></a>
                     <div class="dropdown-content">
-                        <a href="delaware.html">Delaware</a>
-                        <a href="pennsylvania.html">Pennsylvania</a>
-                        <a href="new-jersey.html">New Jersey</a>
-                        <a href="georgia.html">Georgia</a>
-                        <a href="connecticut.html">Connecticut</a>
-                        <a href="massachusetts.html">Massachusetts</a>
-                        <a href="maryland.html">Maryland</a>
-                        <a href="south-carolina.html">South Carolina</a>
-                        <a href="new-hampshire.html">New Hampshire</a>
-                        <a href="virginia.html">Virginia</a>
-                        <a href="new-york.html">New York</a>
-                        <a href="north-carolina.html">North Carolina</a>
-                        <a href="rhode-island.html">Rhode Island</a>
+                        <a href="states/delaware.html">Delaware</a>
+                        <a href="states/pennsylvania.html">Pennsylvania</a>
+                        <a href="states/new-jersey.html">New Jersey</a>
+                        <a href="states/georgia.html">Georgia</a>
+                        <a href="states/connecticut.html">Connecticut</a>
+                        <a href="states/massachusetts.html">Massachusetts</a>
+                        <a href="states/maryland.html">Maryland</a>
+                        <a href="states/south-carolina.html">South Carolina</a>
+                        <a href="states/new-hampshire.html">New Hampshire</a>
+                        <a href="states/virginia.html">Virginia</a>
+                        <a href="states/new-york.html">New York</a>
+                        <a href="states/north-carolina.html">North Carolina</a>
+                        <a href="states/rhode-island.html">Rhode Island</a>
                     </div>
                 </li>
                 <li><a href="history.html">History</a></li>
                 <li><a href="conclusion.html">Conclusion</a></li>
-                <li><a href="../main.html#literature">Literature</a></li>
                 <li><a href="feedback.html" class="active">Feedback</a></li>
             </ul>
         </div>
@@ -61,7 +57,7 @@
     <!-- Main Content Section -->
     <section class="content">
         <div class="container">
-            <h2>Value Of Your Feedback</h2>
+            <h2>Value Your Feedback</h2>
             <p>Thank you for exploring the rich history of the first thirteen American states. I would love to hear your thoughts, suggestions, and experiences related to this project.</p>
             
             <h3>Leave Your Feedback:</h3>

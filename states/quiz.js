@@ -1,5 +1,3 @@
-// quiz_delaware.js
-
 document.addEventListener("DOMContentLoaded", function() {
     const submitButton = document.getElementById("submit-quiz");
     const feedback = document.getElementById("quiz-feedback");
@@ -20,7 +18,6 @@ document.addEventListener("DOMContentLoaded", function() {
     // Функція для вибору відповіді
     window.selectAnswer = function(question, answer) {
         userAnswers[question] = answer;
-        // Підсвічування вибраної відповіді
         const buttons = document.querySelectorAll(`button[onclick="selectAnswer('${question}', 'a')"],
                                                 button[onclick="selectAnswer('${question}', 'b')"],
                                                 button[onclick="selectAnswer('${question}', 'c')"]`);
@@ -32,12 +29,11 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     submitButton.addEventListener("click", function(event) {
-        event.preventDefault(); // Запобігаємо перезавантаженню сторінки при натисканні на кнопку
+        event.preventDefault();
 
         let score = 0;
-        const total = 10; // Загальна кількість питань
+        const total = 10;
 
-        // Перевірка кожного питання
         for (let question in answers) {
             if (userAnswers[question] === answers[question]) {
                 score++;
@@ -49,9 +45,7 @@ document.addEventListener("DOMContentLoaded", function() {
             const selectedAnswer = userAnswers[question];
             const correctAnswer = answers[question];
 
-            // Отримати вибрану кнопку
             const selectedButton = document.querySelector(`button[onclick="selectAnswer('${question}', '${selectedAnswer}')"]`);
-            // Отримати правильну кнопку
             const correctButton = document.querySelector(`button[onclick="selectAnswer('${question}', '${correctAnswer}')"]`);
 
             if (selectedAnswer === correctAnswer) {
@@ -67,12 +61,10 @@ document.addEventListener("DOMContentLoaded", function() {
                 }
             }
 
-            // Відключити всі кнопки для цього питання після подачі
             const buttons = document.querySelectorAll(`button[onclick^="selectAnswer('${question}')"]`);
             buttons.forEach(btn => btn.disabled = true);
         }
 
-        // Генерація повідомлення
         let message = "";
         if (score === total) {
             message = `<i class="fas fa-check-circle"></i> Excellent! You answered all questions correctly.`;
@@ -88,11 +80,8 @@ document.addEventListener("DOMContentLoaded", function() {
             feedback.classList.remove("correct");
         }
 
-        // Вивід повідомлення
         feedback.innerHTML = message;
         feedback.style.display = "block";
-
-        // Відключити кнопку подачі після подачі
         submitButton.disabled = true;
     });
 });

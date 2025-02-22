@@ -4,13 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Introduction - The First 13 American States</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Правильний шлях до CSS -->
-    <!-- Google Fonts для консистентності -->
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <!-- Font Awesome для іконок (опціонально) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrQdP2v6/UYbVx3AnWDrjH2UY6j6VMnVq3E13ujc0nBt8N3p19KcfmGqOk4GJqI6gZr30HBwSxGjkL7ZsQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
-        /* Додаткові стилі для сторінки Introduction */
         .introduction-section {
             background-color: #ffffff;
             padding: 30px;
@@ -67,7 +65,6 @@
             color: #d1e0e0;
         }
 
-        /* Додаткові стилі для відео */
         .video-container {
             position: relative;
             padding-bottom: 56.25%; /* 16:9 */
@@ -216,14 +213,12 @@
             }
         }
 
-        /* Додаткові стилі для елементів */
         .highlight {
             background-color: #e0f7fa;
             padding: 5px 10px;
             border-radius: 4px;
         }
 
-        /* Адаптивність для мобільних пристроїв */
         @media (max-width: 768px) {
             .nav-menu {
                 flex-direction: column;
@@ -286,9 +281,21 @@
                 </li>
                 <li><a href="history.html">History</a></li>
                 <li><a href="conclusion.html">Conclusion</a></li>
+                <div class="theme-toggle">
+                    <button id="theme-toggle-button" aria-label="Перемикання теми">
+                        🌙
+                    </button>
+                </div>
+                <div class="toggle-button">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
             </ul>
         </div>
     </nav>
+
+    <div class="wave-overlay" id="wave-overlay"></div>
 
     <!-- Main Content -->
     <main>
@@ -365,10 +372,9 @@
         </div>
     </footer>
 
-    <!-- JavaScript для Toggle Button та Quiz Functionality -->
-    <script src="script.js"></script> <!-- Правильний шлях до JS -->
+    <script src="script.js"></script>
     <script>
-        // JavaScript для Quiz у Introduction
+        // JavaScript для Quiz
         document.addEventListener("DOMContentLoaded", function() {
             const submitButton = document.getElementById("submit-quiz");
             const feedback = document.getElementById("quiz-feedback");
@@ -386,10 +392,8 @@
             };
             const userAnswers = {};
 
-            // Функція для вибору відповіді
             window.selectAnswer = function(question, answer) {
                 userAnswers[question] = answer;
-                // Підсвічування вибраної відповіді
                 const buttons = document.querySelectorAll(`button[onclick="selectAnswer('${question}', 'a')"],
                                                         button[onclick="selectAnswer('${question}', 'b')"],
                                                         button[onclick="selectAnswer('${question}', 'c')"]`);
@@ -401,19 +405,17 @@
             }
 
             submitButton.addEventListener("click", function(event) {
-                event.preventDefault(); // Запобігаємо перезавантаженню сторінки при натисканні на кнопку
+                event.preventDefault();
 
                 let score = 0;
-                const total = 10; // Загальна кількість питань
+                const total = 10;
 
-                // Перевірка кожного питання
                 for (let question in answers) {
                     if (userAnswers[question] === answers[question]) {
                         score++;
                     }
                 }
 
-                // Генерація повідомлення
                 let message = "";
                 if (score === total) {
                     message = `<i class="fas fa-check-circle"></i> Excellent! You answered all questions correctly.`;
@@ -429,7 +431,6 @@
                     feedback.classList.remove("correct");
                 }
 
-                // Вивід повідомлення
                 feedback.innerHTML = message;
                 feedback.style.display = "block";
             });
